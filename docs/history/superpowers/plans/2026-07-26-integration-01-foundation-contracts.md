@@ -1,0 +1,383 @@
+# Integration 01 Public Contracts and Startup Baseline Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** 统一服务状态、Redisson Bean、Tianshu 可执行产物、版本和 Redis/advertised endpoint 配置，使真实进程具备可启动的共同基线。
+
+**Architecture:** 状态归一化放入 Tianshu management-client 公共模型，Starter、Yuheng、RPC 只消费 typed accessor。所有 Redisson Client 按稳定 Bean 名称装配，部署配置显式传递真实基础设施地址。
+
+**Tech Stack:** Java 21、Spring Boot AutoConfiguration、Jackson、Redisson、Docker Compose、JUnit 5、AssertJ。
+
+## Global Constraints
+
+- 保留 `DdcServiceInstance.status` 和 `DdcManagementServiceInstance.status` 的 String wire component。
+- legacy `REGISTERED`/`UP` 兼容为 ONLINE；未知或空值不能视为在线。
+- 不修改数据库或 Flyway。
+- Tianshu thin JAR 继续是 Maven 主产物，Docker 只使用 `exec` classifier。
+- 每个任务单独提交。
+
+---
+
+### Task 1: 统一服务实例状态合同
+
+**Files:**
+- Create: `egon-cola-components/egon-cola-component-dynamic-config-center/egon-cola-component-dynamic-config-center-management-client/src/main/java/top/egon/cola/component/tianshu/management/model/DdcInstanceStatus.java`
+- Create: `egon-cola-components/egon-cola-component-dynamic-config-center/egon-cola-component-dynamic-config-center-management-client/src/test/java/top/egon/cola/component/tianshu/management/model/DdcInstanceStatusTest.java`
+- Modify: `.../management/model/DdcManagementServiceInstance.java`
+- Modify: `.../management/model/DdcManagementConfigClientInstance.java`
+- Modify: `.../starter/src/main/java/top/egon/cola/component/tianshu/model/registry/DdcServiceInstance.java`
+- Modify: `.../yuheng-biz-gateway/src/main/java/top/egon/cola/component/yuheng/engine/discovery/DdcProviderServiceRegistryAdapter.java`
+- Modify: `.../rpc-starter/src/main/java/top/egon/cola/component/rpc/consumer/RpcConsumerGatewayManager.java`
+- Test: `.../yuheng-biz-gateway/src/test/java/top/egon/cola/component/yuheng/engine/discovery/DdcProviderServiceRegistryAdapterTest.java`
+- Test: `.../rpc-starter/src/test/java/top/egon/cola/component/rpc/consumer/RpcConsumerGatewayManagerTest.java`
+
+**Interfaces:**
+- Produces: `DdcInstanceStatus.fromWire(String)` and `isOnline(Instant, Instant)`.
+- Produces: `DdcServiceInstance.normalizedStatus()`,
+  `DdcManagementServiceInstance.normalizedStatus()` and
+  `DdcManagementConfigClientInstance.normalizedStatus()`.
+- Consumes: existing String JSON values without record component changes.
+
+- [ ] **Step 1: Write failing normalization tests**
+
+```java
+@ParameterizedTest
+@CsvSource({
+        "ONLINE,ONLINE", "REGISTERED,ONLINE", "UP,ONLINE",
+        "OFFLINE,OFFLINE", "EXPIRED,OFFLINE", "DOWN,OFFLINE",
+        "unexpected,UNKNOWN"
+})
+void normalizesWireValues(String wire, DdcInstanceStatus expected) {
+    assertThat(DdcInstanceStatus.fromWire(wire)).isEqualTo(expected);
+}
+
+@Test
+void nullStatusIsUnknownAndExpiredLeaseIsNotOnline() {
+    assertThat(DdcInstanceStatus.fromWire(null)).isEqualTo(UNKNOWN);
+    assertThat(ONLINE.isAvailable(
+            Instant.parse("2026-07-26T00:00:00Z"),
+            Instant.parse("2026-07-25T23:59:59Z")
+    )).isFalse();
+}
+```
+
+- [ ] **Step 2: Run tests and confirm current string comparisons fail**
+
+Run:
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-management-client,\
+egon-cola-components/egon-cola-component-yuheng/\
+egon-cola-component-yuheng-biz-gateway,\
+egon-cola-components/egon-cola-component-rpc/\
+egon-cola-component-rpc-starter -am test
+```
+
+Expected: 新 enum 尚不存在或 ONLINE Provider/RPC Slot 用例失败。
+
+- [ ] **Step 3: Implement the public status type and accessors**
+
+```java
+public enum DdcInstanceStatus {
+    ONLINE, OFFLINE, UNKNOWN;
+
+    public static DdcInstanceStatus fromWire(String value) {
+        if (value == null || value.isBlank()) {
+            return UNKNOWN;
+        }
+        return switch (value.trim().toUpperCase(Locale.ROOT)) {
+            case "ONLINE", "REGISTERED", "UP" -> ONLINE;
+            case "OFFLINE", "EXPIRED", "DOWN" -> OFFLINE;
+            default -> UNKNOWN;
+        };
+    }
+
+    public boolean isAvailable(Instant now, Instant leaseExpireAt) {
+        return this == ONLINE && leaseExpireAt != null
+                && leaseExpireAt.isAfter(now);
+    }
+}
+```
+
+Each String-based record adds:
+
+```java
+public DdcInstanceStatus normalizedStatus() {
+    return DdcInstanceStatus.fromWire(status);
+}
+```
+
+Yuheng and RPC must call `normalizedStatus().isAvailable(now, leaseExpireAt)` rather than compare strings.
+
+- [ ] **Step 4: Run focused tests**
+
+Run the command from Step 2. Expected: PASS with ONLINE, legacy and expired lease cases.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add egon-cola-components/egon-cola-component-dynamic-config-center \
+        egon-cola-components/egon-cola-component-yuheng/egon-cola-component-yuheng-biz-gateway \
+        egon-cola-components/egon-cola-component-rpc/egon-cola-component-rpc-starter
+git commit -m "fix: unify tianshu service availability status"
+```
+
+### Task 2: 按名称隔离 Redisson Client
+
+**Files:**
+- Modify: `.../dynamic-config-center-starter/src/main/java/top/egon/cola/component/tianshu/config/DdcAutoConfig.java`
+- Modify: `.../dynamic-config-center-starter/src/main/java/top/egon/cola/component/tianshu/config/DdcRegistryAutoConfig.java`
+- Modify: `.../yuheng-biz-gateway/src/main/java/top/egon/cola/component/yuheng/engine/GatewayEngineConfiguration.java`
+- Test: `.../dynamic-config-center-starter/src/test/java/top/egon/cola/component/tianshu/config/DdcAutoConfigTest.java`
+- Test: `.../dynamic-config-center-starter/src/test/java/top/egon/cola/component/tianshu/config/DdcRegistryAutoConfigTest.java`
+- Test: `.../yuheng-biz-gateway/src/test/java/top/egon/cola/component/yuheng/engine/GatewayEngineConfigurationTest.java`
+
+**Interfaces:**
+- Produces exact beans `ddcRedissonClient`, `ddcRegistryRedissonClient`, `gatewayRateLimitRedissonClient`.
+- Consumes `DdcRedisTopology.create(...)` for Registry topology.
+
+- [ ] **Step 1: Add failing context tests with an unrelated RedissonClient**
+
+```java
+contextRunner.withBean("applicationRedissonClient", RedissonClient.class, () -> unrelated)
+        .withPropertyValues(
+                "egon.cola.component.tianshu.registry.enabled=true",
+                "egon.cola.component.tianshu.redis.enabled=true"
+        )
+        .run(context -> {
+            assertThat(context).hasBean("ddcRedissonClient");
+            assertThat(context).hasBean("ddcRegistryRedissonClient");
+            assertThat(context.getBean("applicationRedissonClient"))
+                    .isSameAs(unrelated);
+        });
+```
+
+Add an override case where a user-supplied bean with the exact Tianshu name is retained.
+
+- [ ] **Step 2: Run the three context tests**
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-starter,\
+egon-cola-components/egon-cola-component-yuheng/\
+egon-cola-component-yuheng-biz-gateway -am test \
+  -Dtest=DdcAutoConfigTest,DdcRegistryAutoConfigTest,GatewayEngineConfigurationTest
+```
+
+Expected: Tianshu named bean assertions fail with the current type-based conditions.
+
+- [ ] **Step 3: Change conditions and qualifiers**
+
+Use exact conditions:
+
+```java
+@Bean(name = "ddcRegistryRedissonClient", destroyMethod = "shutdown")
+@ConditionalOnMissingBean(name = "ddcRegistryRedissonClient")
+RedissonClient ddcRegistryRedissonClient(DdcProperties properties) {
+    DdcProperties.Redis redis = properties.getRedis();
+    return Redisson.create(DdcRedisTopology.create(
+            redis.getMode(), redis.getNodes(), redis.getMasterName(),
+            redis.getHost(), redis.getPort(), redis.getPassword(),
+            redis.getDatabase()
+    ));
+}
+```
+
+Every consumer uses `@Qualifier("ddcRegistryRedissonClient")`; every condition names the bean. Apply the
+same rule to `ddcRedissonClient` and `gatewayRateLimitRedissonClient`.
+
+- [ ] **Step 4: Run focused tests and starter/yuheng module tests**
+
+Run Step 2, then:
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-starter,\
+egon-cola-components/egon-cola-component-yuheng/\
+egon-cola-component-yuheng-biz-gateway -am test
+```
+
+Expected: PASS and no ambiguous/missing bean failure.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add egon-cola-components/egon-cola-component-dynamic-config-center/egon-cola-component-dynamic-config-center-starter \
+        egon-cola-components/egon-cola-component-yuheng/egon-cola-component-yuheng-biz-gateway
+git commit -m "fix: isolate tianshu and yuheng redis clients"
+```
+
+### Task 3: 修复 Tianshu 可执行镜像和版本来源
+
+**Files:**
+- Modify: `.../dynamic-config-center-admin/Dockerfile`
+- Modify: `.../dynamic-config-center-admin/src/main/java/top/egon/cola/component/tianshu/admin/config/DdcAdminProperties.java`
+- Modify: `.../dynamic-config-center-admin/src/main/java/top/egon/cola/component/tianshu/admin/controller/DdcManifestController.java`
+- Modify: `.../dynamic-config-center-admin/src/main/resources/application.yml`
+- Modify: `.../dynamic-config-center/docs/manifest.md`
+- Test: `.../dynamic-config-center-admin/src/test/java/top/egon/cola/component/tianshu/admin/controller/DdcManifestControllerTest.java`
+
+**Interfaces:**
+- Produces executable artifact `egon-cola-component-dynamic-config-center-admin-exec.jar` for Docker.
+- Produces manifest version from `${project.version}` filtered metadata, not source literals.
+
+- [ ] **Step 1: Add the failing manifest version contract test**
+
+```java
+@Test
+void manifestUsesFilteredComponentVersion() {
+    assertThat(controller.manifest().getData().getVersion()).isEqualTo("5.2.3");
+}
+```
+
+Do not open `target/*-exec.jar` from Surefire: the Boot repackage execution creates that artifact after the
+test phase. The executable artifact and image contract are verified after `package` in Step 4 so a clean build
+cannot accidentally inspect stale output. Do not assert Dockerfile source text: build the image instead.
+
+- [ ] **Step 2: Run the focused admin test**
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-admin \
+  -am -Dtest=DdcManifestControllerTest -Dsurefire.failIfNoSpecifiedTests=false test
+```
+
+Expected: the new manifest/version contract fails before the version fix.
+
+- [ ] **Step 3: Use the exec artifact and filtered version metadata**
+
+The module-scoped Dockerfile runtime copy must be:
+
+```dockerfile
+COPY target/egon-cola-component-dynamic-config-center-admin-exec.jar app.jar
+```
+
+Import the Starter's already filtered `META-INF/egon-cola-tianshu.properties` and feed its `sdk.version` into the
+admin manifest property. Keep the explicit admin manifest property overridable, but remove all `5.2.1`
+source and documentation defaults.
+
+- [ ] **Step 4: Re-run package and inspect both manifests**
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-admin -am clean package
+unzip -p egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-admin/target/\
+egon-cola-component-dynamic-config-center-admin-exec.jar META-INF/MANIFEST.MF
+unzip -p egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-starter/target/\
+egon-cola-component-dynamic-config-center-starter-5.2.3.jar \
+META-INF/egon-cola-tianshu.properties
+
+docker build \
+  -f egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-admin/Dockerfile \
+  -t egon-cola-tianshu-admin:contract-test \
+  egon-cola-components/egon-cola-component-dynamic-config-center/\
+egon-cola-component-dynamic-config-center-admin
+docker image inspect egon-cola-tianshu-admin:contract-test --format '{{json .Config.Entrypoint}} {{json .Config.Cmd}}'
+```
+
+Expected: package PASS; exec JAR contains the Boot launcher `Main-Class`; filtered metadata contains
+`sdk.version=5.2.3`; the image builds from the same module context used by Compose and executes the exec JAR.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add egon-cola-components/egon-cola-component-dynamic-config-center
+git commit -m "fix: package executable tianshu admin image"
+```
+
+### Task 4: 对齐 Compose/live 的基础设施和服务身份
+
+**Files:**
+- Modify: `.../yuheng/deployment/compose.yml`
+- Modify: `.../yuheng/deployment/.env.example`
+- Modify: `.../yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/live/GatewayLiveTopologyIT.java`
+- Modify: `.../yuheng-test-http-provider/src/main/resources/application.yml`
+- Modify: `.../yuheng-test-http-provider/src/main/java/top/egon/cola/component/yuheng/test/http/HttpProviderRuntimeConfiguration.java`
+- Modify: `.../rpc-starter/src/main/java/top/egon/cola/component/rpc/config/EgonRpcProperties.java`
+- Create: `.../yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/deployment/GatewayComposeConfigurationTest.java`
+- Create: `.../yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/live/GatewayLiveTopologyContractTest.java`
+- Create: `.../rpc-starter/src/test/java/top/egon/cola/component/rpc/config/EgonRpcPropertiesTest.java`
+- Modify: `.../rpc/README.md`
+- Modify: `.../rpc/README.zh-CN.md`
+
+**Interfaces:**
+- Produces default RPC Yuheng service name `egon-yuheng-rpc`.
+- Produces explicit Tianshu Redis host/port for every Engine/Provider/Consumer process.
+- Produces matching Reporting artifact version and Provider service version.
+
+- [ ] **Step 1: Add failing configuration assertions**
+
+```java
+assertThat(engineEnvironment)
+        .containsEntry("EGON_COLA_COMPONENT_TIANSHU_REDIS_HOST", "tianshu-redis")
+        .containsEntry("EGON_COLA_COMPONENT_YUHENG_ENGINE_RPC_ADVERTISED_HOST",
+                "yuheng-biz-gateway");
+assertThat(new EgonRpcProperties().getConsumer().getGatewayServiceName())
+        .isEqualTo("egon-yuheng-rpc");
+```
+
+Add a default-Surefire contract test for the live fixture so every child-process spec is checked for the
+Testcontainers Tianshu Redis mapped port without starting the gated `*IT` topology. Bind the Compose environment
+through Spring's relaxed-binding path instead of asserting only raw YAML keys.
+
+- [ ] **Step 2: Run deployment/default tests**
+
+```bash
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-yuheng/\
+egon-cola-component-yuheng-test/egon-cola-component-yuheng-test-suite,\
+egon-cola-components/egon-cola-component-rpc/egon-cola-component-rpc-starter \
+  -am test -Dtest=GatewayComposeConfigurationTest,EgonRpcPropertiesTest \
+  -Dsurefire.failIfNoSpecifiedTests=false
+```
+
+Expected: Tianshu Redis, advertised host, or default service name assertions fail.
+
+- [ ] **Step 3: Align all properties**
+
+Set explicit values in Compose and harness:
+
+```yaml
+EGON_COLA_COMPONENT_TIANSHU_REDIS_HOST: tianshu-redis
+EGON_COLA_COMPONENT_TIANSHU_REDIS_PORT: 6379
+EGON_COLA_COMPONENT_YUHENG_ENGINE_RPC_ADVERTISED_HOST: yuheng-biz-gateway
+```
+
+Use one `yuheng.test.service-version` value for both Reporting artifact version and
+`HttpProviderRuntimeProperties`; set the RPC Consumer default to `egon-yuheng-rpc`.
+
+- [ ] **Step 4: Verify static Compose and focused tests**
+
+```bash
+docker compose --env-file \
+  egon-cola-components/egon-cola-component-yuheng/deployment/.env.example \
+  -f egon-cola-components/egon-cola-component-yuheng/deployment/compose.yml \
+  config --quiet
+
+./mvnw -B -ntp \
+  -pl egon-cola-components/egon-cola-component-yuheng/\
+egon-cola-component-yuheng-test/egon-cola-component-yuheng-test-suite,\
+egon-cola-components/egon-cola-component-rpc/egon-cola-component-rpc-starter \
+  -am test
+```
+
+Expected: both commands PASS. This does not yet claim real processes started.
+The default test run must execute the live-fixture contract; an explicit `-Dtest=GatewayLiveTopologyIT`
+must not be the only way to cover it. Update the RPC README defaults together with the code default.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add egon-cola-components/egon-cola-component-yuheng \
+        egon-cola-components/egon-cola-component-rpc
+git commit -m "fix: align yuheng tianshu runtime coordinates"
+```

@@ -1,0 +1,148 @@
+version: 2
+
+updates:
+  # Maven dependencies and Maven plugins
+  - package-ecosystem: "maven"
+    directories:
+      - "/"
+      - "/egon-cola-components"
+      - "/egon-cola-components/*"
+      - "/egon-cola-xingyuan"
+      - "/egon-cola-xingyuan/*"
+      - "/egon-cola-archetypes"
+      - "/egon-cola-archetypes/*"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Singapore"
+
+    open-pull-requests-limit: 8
+    rebase-strategy: "auto"
+    versioning-strategy: "increase-if-necessary"
+
+    labels:
+      - "dependencies"
+      - "java"
+      - "maven"
+
+    commit-message:
+      prefix: "build(deps)"
+      include: "scope"
+
+    groups:
+      maven-plugins:
+        applies-to: "version-updates"
+        patterns:
+          - "org.apache.maven.plugins:*"
+          - "org.codehaus.mojo:*"
+          - "org.sonatype.central:*"
+        update-types:
+          - "minor"
+          - "patch"
+
+      maven-minor-and-patch:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+        group-by: "dependency-name"
+
+      maven-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1
+
+  # GitHub Actions versions, for example actions/checkout and actions/setup-java
+  - package-ecosystem: "github-actions"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:30"
+      timezone: "Asia/Singapore"
+
+    open-pull-requests-limit: 4
+    rebase-strategy: "auto"
+
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "ci"
+
+    commit-message:
+      prefix: "ci(deps)"
+      include: "scope"
+
+    groups:
+      github-actions-minor-and-patch:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+      github-actions-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1
+
+  # Tianquan-Jianshen React SDK and Admin Web workspace
+  - package-ecosystem: "npm"
+    directory: "/egon-cola-xingyuan/egon-cola-tianquan-jianshen"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "10:00"
+      timezone: "Asia/Singapore"
+
+    open-pull-requests-limit: 4
+    rebase-strategy: "auto"
+    versioning-strategy: "increase-if-necessary"
+
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "tianquan-jianshen"
+
+    commit-message:
+      prefix: "build(deps)"
+      include: "scope"
+
+    groups:
+      tianquan-jianshen-npm-minor-and-patch:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+      tianquan-jianshen-npm-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1

@@ -1,0 +1,59 @@
+name: CI Frontend
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend:
+    name: ${{ matrix.project }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: xingyuan-admin-web-shared
+            dir: egon-cola-xingyuan/egon-cola-xingyuan-admin-web-shared
+          - project: xingyuan-admin-portal
+            dir: egon-cola-xingyuan/egon-cola-xingyuan-admin-portal
+          - project: tianshu-admin-web
+            dir: egon-cola-xingyuan/egon-cola-tianshu/egon-cola-tianshu-admin-web
+          - project: tianquan-shoubing-admin-web
+            dir: egon-cola-xingyuan/egon-cola-tianquan-shoubing/egon-cola-tianquan-shoubing-admin-web
+          - project: tianquan-jianshen-frontend
+            dir: egon-cola-xingyuan/egon-cola-tianquan-jianshen
+          - project: yuheng-admin-web
+            dir: egon-cola-xingyuan/egon-cola-yuheng/yuheng-admin-web
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node 24
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: ${{ matrix.dir }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.dir }}
+        run: npm ci
+
+      # Every project's build script runs tsc before vite, so this is the compile gate.
+      # The jianshen workspace builds its react-sdk before the admin-web that imports it.
+      - name: Compile
+        working-directory: ${{ matrix.dir }}
+        run: npm run build

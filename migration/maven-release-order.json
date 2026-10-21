@@ -1,0 +1,1071 @@
+{
+  "version": "0.0.1",
+  "namespace": "top.egon",
+  "projects": [
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-components-bom/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-components-bom",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": []
+    },
+    {
+      "repository": "Stellar-Enclosure-Parent",
+      "pom": "Stellar-Enclosure-Parent/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-parent",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": []
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-facade/pom.xml",
+      "groupId": "top.egon.internal.archetype.source",
+      "artifactId": "stellar-enclosure-source-service-open-facade",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": true,
+      "dependsOn": []
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-facade/pom.xml",
+      "groupId": "top.egon.internal.archetype.source",
+      "artifactId": "stellar-enclosure-source-web-open-facade",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": true,
+      "dependsOn": []
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-mcp-remote/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-mcp-remote",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": []
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetypes-parent",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-bom",
+        "stellar-enclosure-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-components-parent",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-bom",
+        "stellar-enclosure-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Parent",
+      "pom": "Stellar-Enclosure-Parent/platform-parent/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-platform-parent",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-bom",
+        "stellar-enclosure-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-agent/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-agent",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-light/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-light",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-light-open/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-light-open",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-service-open/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-service-open",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent",
+        "stellar-enclosure-source-web-open-facade"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-web-open/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-web-open",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent",
+        "stellar-enclosure-source-service-open-facade"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-dynamic-thread-pool",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-method-extension/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-method-extension",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rpc/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-rpc",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-platform-parent"
+      ]
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "pom": "tianquan-shoubing-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-shoubing",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-platform-parent"
+      ]
+    },
+    {
+      "repository": "tianshu-service",
+      "pom": "tianshu-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianshu",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-platform-parent"
+      ]
+    },
+    {
+      "repository": "yaoguang-service",
+      "pom": "yaoguang-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yaoguang",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-platform-parent"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng",
+      "version": "0.0.1",
+      "packaging": "pom",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-platform-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-test/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-test",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-trace/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-trace",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common"
+      ]
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-contract/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen-contract",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-jianshen"
+      ]
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "pom": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-shoubing-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-shoubing"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-trace"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-trace-spring-boot-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-trace-spring-boot-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-trace"
+      ]
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-jianshen",
+        "stellar-enclosure-tianquan-jianshen-contract"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-access-guard-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-access-guard-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-agent-flow-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-agent-flow-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-api/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-api",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-bridge/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-bridge",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-cache-spring-boot-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-cache-spring-boot-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-crypto/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-crypto",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-data-desensitize-spring-boot-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-data-desensitize-spring-boot-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-id-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-id-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-dynamic-thread-pool-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-trace",
+        "stellar-enclosure-component-dynamic-thread-pool"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-method-extension/stellar-enclosure-component-method-extension-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-method-extension-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-method-extension"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rag-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-rag-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rule-engine-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-rule-engine-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-bytecode-api",
+        "stellar-enclosure-component-bytecode-bridge",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-runtime/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-runtime",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-bytecode-api",
+        "stellar-enclosure-component-bytecode-bridge"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common",
+        "stellar-enclosure-component-common-cache-spring-boot-starter",
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-common-test"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-admin/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-dynamic-thread-pool-admin",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-trace-spring-boot-starter",
+        "stellar-enclosure-component-dynamic-thread-pool",
+        "stellar-enclosure-component-dynamic-thread-pool-starter"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rpc/stellar-enclosure-component-rpc-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-rpc-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-access-guard-starter",
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-common-trace",
+        "stellar-enclosure-component-rpc"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-contract/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-contract",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-crypto",
+        "stellar-enclosure-yuheng"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-agent/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-agent",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-bytecode-bridge",
+        "stellar-enclosure-component-bytecode-core",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-architecture-maven-plugin/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-architecture-maven-plugin",
+      "version": "0.0.1",
+      "packaging": "maven-plugin",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-bytecode-core",
+        "stellar-enclosure-component-common-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-bytecode/stellar-enclosure-component-bytecode-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-bytecode-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-bytecode",
+        "stellar-enclosure-component-bytecode-runtime",
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-trace",
+        "stellar-enclosure-component-method-extension-starter"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-code-generator/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-code-generator",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter",
+        "stellar-enclosure-component-common-test",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-test/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-dynamic-thread-pool-test",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-dynamic-thread-pool",
+        "stellar-enclosure-component-dynamic-thread-pool-admin",
+        "stellar-enclosure-component-dynamic-thread-pool-starter"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-transactional-outbox-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-transactional-outbox-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter",
+        "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-facade/pom.xml",
+      "groupId": "top.egon.internal.archetype.source",
+      "artifactId": "stellar-enclosure-source-service-facade",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": true,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-facade/pom.xml",
+      "groupId": "top.egon.internal.archetype.source",
+      "artifactId": "stellar-enclosure-source-web-facade",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": true,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter"
+      ]
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "pom": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-rpc-contract/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-shoubing-rpc-contract",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-tianquan-shoubing"
+      ]
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "pom": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-shoubing-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-tianquan-shoubing",
+        "stellar-enclosure-tianquan-shoubing-core"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-contract"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-service/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-service",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent",
+        "stellar-enclosure-source-web-facade"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-web/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-archetype-web",
+      "version": "0.0.1",
+      "packaging": "maven-archetype",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-archetypes-parent",
+        "stellar-enclosure-source-service-facade"
+      ]
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-data-desensitize-spring-boot-starter",
+        "stellar-enclosure-tianquan-jianshen",
+        "stellar-enclosure-tianquan-jianshen-contract",
+        "stellar-enclosure-tianquan-jianshen-core",
+        "stellar-enclosure-tianquan-shoubing-starter"
+      ]
+    },
+    {
+      "repository": "tianshu-service",
+      "pom": "tianshu-service/stellar-enclosure-tianshu-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianshu-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-common-crypto",
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-common-trace",
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-tianshu"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-mcp-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-mcp-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-contract",
+        "stellar-enclosure-yuheng-core"
+      ]
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rpc/stellar-enclosure-component-rpc-tianshu-adapter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-component-rpc-tianshu-adapter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-core",
+        "stellar-enclosure-component-rpc",
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-tianshu-starter"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-runtime-core/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-runtime-core",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-tianshu-starter",
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-contract",
+        "stellar-enclosure-yuheng-core"
+      ]
+    },
+    {
+      "repository": "tianshu-service",
+      "pom": "tianshu-service/stellar-enclosure-tianshu-ai-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianshu-ai-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianshu",
+        "stellar-enclosure-tianshu-starter"
+      ]
+    },
+    {
+      "repository": "tianshu-service",
+      "pom": "tianshu-service/stellar-enclosure-tianshu-http-registration-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianshu-http-registration-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-tianshu",
+        "stellar-enclosure-tianshu-starter"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-starter/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-starter",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-common-id-starter",
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-contract"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-starter-openapi/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-starter-openapi",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-contract"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-starter-openapi-webflux/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-starter-openapi-webflux",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-starter-openapi"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-starter-openapi-webmvc/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-starter-openapi-webmvc",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-starter-openapi"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-contract/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-rpc-contract",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-yuheng-contract",
+        "stellar-enclosure-yuheng-starter"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-edge-gateway/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-edge-gateway",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-yuheng",
+        "stellar-enclosure-yuheng-starter-openapi-webflux"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-http-provider/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-http-provider",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng-starter-openapi-webmvc"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-mcp-provider/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-mcp-provider",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianquan-jianshen-starter",
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng-starter-openapi-webmvc"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-consumer/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-rpc-consumer",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-yuheng-test-rpc-contract"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-provider/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-rpc-provider",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-starter",
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-yuheng-starter",
+        "stellar-enclosure-yuheng-test-rpc-contract"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-tianquan-shoubing-backend/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-tianquan-shoubing-backend",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianquan-jianshen-starter",
+        "stellar-enclosure-tianquan-shoubing-starter",
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng-starter-openapi-webmvc"
+      ]
+    },
+    {
+      "repository": "yuheng-service",
+      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-webflux-http-provider/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-yuheng-test-webflux-http-provider",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-component-rpc-tianshu-adapter",
+        "stellar-enclosure-tianshu-http-registration-starter",
+        "stellar-enclosure-yuheng-starter-openapi-webflux"
+      ]
+    }
+  ]
+}
