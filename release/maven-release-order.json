@@ -43,16 +43,6 @@
       "dependsOn": []
     },
     {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-mcp-remote/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-mcp-remote",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": []
-    },
-    {
       "repository": "Stellar-Enclosure-COLA",
       "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/pom.xml",
       "groupId": "top.egon",
@@ -242,18 +232,6 @@
       "pom": "tianshu-service/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-tianshu",
-      "version": "0.0.1",
-      "packaging": "pom",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-platform-parent"
-      ]
-    },
-    {
-      "repository": "yaoguang-service",
-      "pom": "yaoguang-service/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yaoguang",
       "version": "0.0.1",
       "packaging": "pom",
       "resolvedFacade": false,
@@ -564,21 +542,6 @@
     },
     {
       "repository": "Stellar-Enclosure-Components",
-      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-admin/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-component-dynamic-thread-pool-admin",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-common-core",
-        "stellar-enclosure-component-common-trace-spring-boot-starter",
-        "stellar-enclosure-component-dynamic-thread-pool",
-        "stellar-enclosure-component-dynamic-thread-pool-starter"
-      ]
-    },
-    {
-      "repository": "Stellar-Enclosure-Components",
       "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-rpc/stellar-enclosure-component-rpc-starter/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-component-rpc-starter",
@@ -664,20 +627,6 @@
         "stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter",
         "stellar-enclosure-component-common-test",
         "stellar-enclosure-components-parent"
-      ]
-    },
-    {
-      "repository": "Stellar-Enclosure-Components",
-      "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-test/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-component-dynamic-thread-pool-test",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-dynamic-thread-pool",
-        "stellar-enclosure-component-dynamic-thread-pool-admin",
-        "stellar-enclosure-component-dynamic-thread-pool-starter"
       ]
     },
     {
@@ -948,123 +897,6 @@
       "dependsOn": [
         "stellar-enclosure-yuheng",
         "stellar-enclosure-yuheng-starter-openapi"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-contract/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-rpc-contract",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-starter",
-        "stellar-enclosure-yuheng-contract",
-        "stellar-enclosure-yuheng-starter"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-edge-gateway/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-edge-gateway",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-tianquan-shoubing-starter",
-        "stellar-enclosure-yuheng",
-        "stellar-enclosure-yuheng-starter-openapi-webflux"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-http-provider/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-http-provider",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-tianshu-http-registration-starter",
-        "stellar-enclosure-yuheng-starter-openapi-webmvc"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-mcp-provider/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-mcp-provider",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-tianquan-jianshen-starter",
-        "stellar-enclosure-tianquan-shoubing-starter",
-        "stellar-enclosure-tianshu-http-registration-starter",
-        "stellar-enclosure-yuheng-starter-openapi-webmvc"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-consumer/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-rpc-consumer",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-starter",
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-yuheng-test-rpc-contract"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-rpc-provider/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-rpc-provider",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-starter",
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-yuheng-starter",
-        "stellar-enclosure-yuheng-test-rpc-contract"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-tianquan-shoubing-backend/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-tianquan-shoubing-backend",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-tianquan-jianshen-starter",
-        "stellar-enclosure-tianquan-shoubing-starter",
-        "stellar-enclosure-tianshu-http-registration-starter",
-        "stellar-enclosure-yuheng-starter-openapi-webmvc"
-      ]
-    },
-    {
-      "repository": "yuheng-service",
-      "pom": "yuheng-service/stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-webflux-http-provider/pom.xml",
-      "groupId": "top.egon",
-      "artifactId": "stellar-enclosure-yuheng-test-webflux-http-provider",
-      "version": "0.0.1",
-      "packaging": "jar",
-      "resolvedFacade": false,
-      "dependsOn": [
-        "stellar-enclosure-component-rpc-tianshu-adapter",
-        "stellar-enclosure-tianshu-http-registration-starter",
-        "stellar-enclosure-yuheng-starter-openapi-webflux"
       ]
     }
   ]

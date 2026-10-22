@@ -348,6 +348,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <publishingServerId>${central.server.id}</publishingServerId>
+                        <skipPublishing>${maven.deploy.skip}</skipPublishing>
                         <autoPublish>true</autoPublish>
                         <waitUntil>published</waitUntil>
                         <!-- Keep executable Admin services and test fixtures out of Maven Central. -->
@@ -356,6 +357,8 @@
                             <excludeArtifact>stellar-enclosure-tianshu-test</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-yuheng-admin</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-yuheng-biz-gateway</excludeArtifact>
+                            <excludeArtifact>stellar-enclosure-yuheng-edge-gateway</excludeArtifact>
+                            <excludeArtifact>stellar-enclosure-yuheng-llm-gateway</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-yuheng-mcp-gateway</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-yuheng-test</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-yuheng-test-http-provider</excludeArtifact>
@@ -371,6 +374,8 @@
                             <excludeArtifact>stellar-enclosure-tianquan-shoubing-gateway-adapter</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-tianquan-jianshen-admin</excludeArtifact>
                             <excludeArtifact>stellar-enclosure-tianquan-jianshen-gateway-adapter</excludeArtifact>
+                            <excludeArtifact>stellar-enclosure-yaoguang</excludeArtifact>
+                            <excludeArtifact>stellar-enclosure-yaoguang-admin</excludeArtifact>
                         </excludeArtifacts>
                     </configuration>
                 </plugin>
@@ -454,7 +459,7 @@
                         <artifactId>maven-deploy-plugin</artifactId>
                         <inherited>false</inherited>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>${maven.deploy.skip}</skip>
                         </configuration>
                     </plugin>
                     <plugin>

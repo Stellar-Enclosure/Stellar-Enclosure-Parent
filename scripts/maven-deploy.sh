@@ -11,6 +11,10 @@ while (($#)); do
     *) echo "Usage: $0 --workspace ABS --local-repository ABS [--dry-run|--publish]" >&2; exit 2 ;;
   esac
 done
+if [[ "$mode" == '--publish' ]]; then
+  echo "Workspace-wide publication has been retired. Use the independent publication commands in each repository's README.md." >&2
+  exit 2
+fi
 [[ "$workspace" == /* && "$local_repository" == /* ]] || exit 2
 workspace="$(cd "$workspace" && pwd -P)"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
@@ -34,18 +38,5 @@ with tempfile.TemporaryDirectory(prefix='stellar-release.') as temporary:
     pom.write_text('<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion><groupId>top.egon.internal.build</groupId><artifactId>stellar-enclosure-release-check</artifactId><version>0.0.1</version><packaging>pom</packaging><modules>'+modules+'</modules></project>')
     subprocess.run([sys.argv[4],'-B','-ntp','-f',str(pom),'-Dmaven.repo.local='+sys.argv[3],'-Prelease','-Pgenerated-archetypes','-DskipTests','-DskipITs','-Dinvoker.skip=true','-Darchetype.test.skip=true','-Dgpg.skip=true','verify'],check=True)
 print('PASS release dry-run; no artifacts were published.')
-PY
-else
-  python3 - "$workspace" "$manifest" "$local_repository" "$mvn" <<'PY'
-from pathlib import Path
-import json,subprocess,sys
-workspace=Path(sys.argv[1]);manifest=json.loads(Path(sys.argv[2]).read_text())
-for item in manifest['projects']:
-    command=[sys.argv[4],'-B','-ntp','-f',str(workspace/item['pom']),'-Dmaven.repo.local='+sys.argv[3],'-Prelease','-DskipTests','-DskipITs','-Dinvoker.skip=true','-Darchetype.test.skip=true']
-    if item['packaging']=='pom':command.append('-N')
-    if item['resolvedFacade']:command.append('-Ppublish-resolved-facade')
-    command.append('deploy')
-    print('PUBLISH',item['groupId']+':'+item['artifactId']+':'+item['version'],flush=True)
-    subprocess.run(command,check=True)
 PY
 fi
