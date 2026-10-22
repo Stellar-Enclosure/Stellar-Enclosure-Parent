@@ -66,13 +66,13 @@ seed Stellar-Enclosure-Components/pom.xml
 for repo in tianshu-service yuheng-service yaoguang-service tianquan-jianshen-service tianquan-shoubing-service; do
   seed "$repo/pom.xml"
 done
-seed Stellar-Enclosure-COLA/stellar-enclosure-archetypes/pom.xml
+seed Stellar-Enclosure-COLA/pom.xml
 python3 - "$workspace" "$reactor_dir/pom.xml" <<'PY'
 from pathlib import Path
 from xml.sax.saxutils import escape
 import sys, os
 workspace=Path(sys.argv[1])
-paths=['Stellar-Enclosure-Components','tianshu-service','yuheng-service','yaoguang-service','tianquan-jianshen-service','tianquan-shoubing-service','Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects']
+paths=['Stellar-Enclosure-Components','tianshu-service','yuheng-service','yaoguang-service','tianquan-jianshen-service','tianquan-shoubing-service','Stellar-Enclosure-COLA/source-projects']
 modules=''.join('        <module>'+escape(os.path.relpath(workspace/p,Path(sys.argv[2]).resolve().parent))+'</module>\n' for p in paths)
 Path(sys.argv[2]).write_text('''<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">

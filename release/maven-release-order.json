@@ -24,7 +24,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-facade/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-facade/pom.xml",
       "groupId": "top.egon.internal.archetype.source",
       "artifactId": "stellar-enclosure-source-service-open-facade",
       "version": "0.0.1",
@@ -34,7 +34,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-facade/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-facade/pom.xml",
       "groupId": "top.egon.internal.archetype.source",
       "artifactId": "stellar-enclosure-source-web-open-facade",
       "version": "0.0.1",
@@ -44,7 +44,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetypes-parent",
       "version": "0.0.1",
@@ -83,7 +83,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-agent/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-agent/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-agent",
       "version": "0.0.1",
@@ -95,7 +95,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-light/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-light",
       "version": "0.0.1",
@@ -107,7 +107,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-light-open/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-light-open",
       "version": "0.0.1",
@@ -119,7 +119,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-service-open/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-service-open",
       "version": "0.0.1",
@@ -132,7 +132,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-web-open/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-web-open",
       "version": "0.0.1",
@@ -646,7 +646,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-facade/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-facade/pom.xml",
       "groupId": "top.egon.internal.archetype.source",
       "artifactId": "stellar-enclosure-source-service-facade",
       "version": "0.0.1",
@@ -658,7 +658,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-facade/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-facade/pom.xml",
       "groupId": "top.egon.internal.archetype.source",
       "artifactId": "stellar-enclosure-source-web-facade",
       "version": "0.0.1",
@@ -710,7 +710,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-service/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-service",
       "version": "0.0.1",
@@ -723,7 +723,7 @@
     },
     {
       "repository": "Stellar-Enclosure-COLA",
-      "pom": "Stellar-Enclosure-COLA/stellar-enclosure-archetypes/.generated/stellar-enclosure-archetype-web/pom.xml",
+      "pom": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/pom.xml",
       "groupId": "top.egon",
       "artifactId": "stellar-enclosure-archetype-web",
       "version": "0.0.1",

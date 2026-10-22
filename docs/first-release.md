@@ -8,7 +8,7 @@ Each repository owns its publication commands in its README. Normal builds and G
 |---|---|---|
 | Stellar-Enclosure-Parent | Common parent and platform parent POMs | No sibling repositories are aggregated |
 | Stellar-Enclosure-Components | BOM, parent POMs, reusable components, Starters, code generator, Maven plugin and reusable boundary-test assertions | Executable Admin, sample/integration tests and benchmarks |
-| Stellar-Enclosure-COLA | Archetype parent, seven archetypes and four required peer facade contracts | Root/generated aggregators and all other source examples |
+| Stellar-Enclosure-COLA | Root archetype parent, seven archetypes and four required peer facade contracts | Generated aggregator and all other source examples |
 | tianshu-service | Parent and three Starters | Admin and integration tests |
 | yuheng-service | Parent, contract, cores and four Starters | Admin, all executable gateways and the test reactor |
 | tianquan-jianshen-service | Parent, contract, core and Starter | Admin and internal gateway adapter |
