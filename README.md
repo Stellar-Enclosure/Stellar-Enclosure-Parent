@@ -1,6 +1,18 @@
 # Stellar-Enclosure-Parent
 
-Stellar Enclosure Java modules. All first-party modules start at **0.0.1**.
+Shared Maven build and release foundations for Stellar Enclosure. All first-party modules start at **0.0.1**.
+
+## Responsibilities
+
+| Entry | Function |
+|---|---|
+| [Common parent](pom.xml) | Publishes `stellar-enclosure-parent`; manages the Spring Boot dependency baseline, shared database dependencies and release plugin configuration. |
+| [Platform parent](platform-parent/pom.xml) | Publishes `stellar-enclosure-platform-parent`; sets the Java 21 baseline, imports the Components BOM, manages platform libraries, and configures compiler, test, Protobuf and packaging plugins. |
+| [Workspace bootstrap](scripts/bootstrap-workspace.sh) | Installs prerequisite POMs and builds the eight sibling Java repositories in dependency order before their first public release. Supports explicit workspace/cache paths, offline mode and reactor resume. |
+| [Release inventory](release/maven-release-order.json) and [inventory generator](scripts/maven-release-order.py) | Records artifact ownership, publication exclusions and dependency order for the first Maven Central release. |
+| [Release guide](docs/first-release.md) | Documents credentials, local checks, publication order and recovery after a partial publication. |
+
+This is a build infrastructure repository: it contains two parent POMs and supporting scripts, with no business application or API. Parent inheritance and dependency management do not start services or aggregate sibling repositories in a normal Maven invocation. Components owns the reusable libraries/BOM; [COLA](https://github.com/Stellar-Enclosure/Stellar-Enclosure-COLA) owns the application archetypes and coding skills. The release guide is the entry point for working across repositories.
 
 ## Build
 
