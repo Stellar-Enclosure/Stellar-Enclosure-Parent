@@ -1,14 +1,14 @@
 # First 0.0.1 release
 
-GitHub migration and package publication are separate. Push workflows never deploy to Central or npm.
+Source validation and package publication are separate. Push workflows never deploy to Central or npm.
 
 ## Maven
 
 1. Use Java 21. Configure your Central/GPG credentials outside Git.
-2. Run scripts/bootstrap-migration.sh with explicit workspace/local-repository arguments. It orders actual module dependencies; publishing entire repositories in a simple sequence is insufficient.
+2. Run scripts/bootstrap-workspace.sh with explicit workspace/local-repository arguments. It orders actual module dependencies; publishing entire repositories in a simple sequence is insufficient.
 3. In COLA run scripts/generate_archetypes.sh generate and check. Validate all seven generated families.
 4. Run scripts/maven-deploy.sh --workspace ABS --local-repository ABS --dry-run. It prepares the public artifact graph and release profiles with runtime tests and signing disabled.
-5. Review migration/maven-release-order.json, all GAVs/POM metadata and release-shape results. Use --publish only when you intentionally want Central publication. Namespace remains top.egon; initial versions are 0.0.1.
+5. Review release/maven-release-order.json, all GAVs/POM metadata and release-shape results. Use --publish only when you intentionally want Central publication. Namespace remains top.egon; initial versions are 0.0.1.
 
 The common parent and standalone Components BOM precede the platform parent. Base components precede Shoubing core/starter, Tianshu base starter, the Components RPC Tianshu adapter, upper-level starters and applications. Native/Open facade artifacts use the existing publish-resolved-facade profile so unpublished source-project parents do not leak into public POMs. Internal source projects and modules marked for skipped publication are excluded.
 
@@ -20,7 +20,7 @@ Public packages:
 - @stellar-enclosure/stellar-enclosure-web-shared@0.0.1
 - @stellar-enclosure/stellar-enclosure-tianquan-jianshen-react-sdk@0.0.1
 
-Run web-sdk/scripts/verify-migration-consumers.mjs with workspace/cache/output arguments. Publish the exact verified tarballs with npm publish TARFILE --access public. Actual integrity values are in web-sdk/release/npm-manifest.json. The workspace root and all applications remain private.
+Run web-sdk/scripts/verify-consumers.mjs with workspace/cache/output arguments. Publish the exact verified tarballs with npm publish TARFILE --access public. Actual integrity values are in web-sdk/release/npm-manifest.json. The workspace root and all applications remain private.
 
 After publication validate ordinary npm ci and Maven builds without prewarmed first-party caches. Set STELLAR_USE_SOURCE_BOOTSTRAP=false to use the published-artifact CI path.
 

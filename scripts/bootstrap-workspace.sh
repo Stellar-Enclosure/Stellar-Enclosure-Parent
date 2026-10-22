@@ -29,14 +29,17 @@ for repo in Stellar-Enclosure-Parent Stellar-Enclosure-Components Stellar-Enclos
   [[ -d "$workspace/$repo/.git" ]] || { echo "Missing repository: $repo" >&2; exit 2; }
 done
 case "$local_repository/" in "$workspace/"|"$workspace/"*/.git/*) echo "Unsafe cache directory" >&2; exit 2 ;; esac
-mkdir -p "$workspace/.migration" "$local_repository"
+mkdir -p "$local_repository"
 lock="$local_repository/.stellar-bootstrap.lock"
 mkdir "$lock" 2>/dev/null || { echo "Bootstrap already owns this cache: $lock" >&2; exit 2; }
-reactor_dir="$(mktemp -d "$workspace/.migration/bootstrap.XXXXXX")"
+reactor_dir=''
 cleanup() {
+  if [[ -n "$reactor_dir" ]]; then rm -rf -- "$reactor_dir"; fi
   rmdir "$lock" 2>/dev/null || true
 }
 trap cleanup EXIT
+reactor_dir="$(mktemp -d "${TMPDIR:-/tmp}/stellar-bootstrap.XXXXXX")"
+reactor_dir="$(cd "$reactor_dir" && pwd -P)"
 mvn="$workspace/Stellar-Enclosure-Parent/mvnw"
 args=(-B -ntp "-Dmaven.repo.local=$local_repository" -DskipTests -DskipITs -Dinvoker.skip=true -Darchetype.test.skip=true)
 if $offline; then args+=(--offline); fi
@@ -70,11 +73,11 @@ from xml.sax.saxutils import escape
 import sys, os
 workspace=Path(sys.argv[1])
 paths=['Stellar-Enclosure-Components','tianshu-service','yuheng-service','yaoguang-service','tianquan-jianshen-service','tianquan-shoubing-service','Stellar-Enclosure-COLA/stellar-enclosure-archetypes/source-projects']
-modules=''.join('        <module>'+escape(os.path.relpath(workspace/p,Path(sys.argv[2]).parent))+'</module>\n' for p in paths)
+modules=''.join('        <module>'+escape(os.path.relpath(workspace/p,Path(sys.argv[2]).resolve().parent))+'</module>\n' for p in paths)
 Path(sys.argv[2]).write_text('''<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>top.egon.internal.migration</groupId>
+    <groupId>top.egon.internal.build</groupId>
     <artifactId>stellar-enclosure-bootstrap</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>

@@ -2,8 +2,6 @@
 
 Stellar Enclosure Java modules. All first-party modules start at **0.0.1**.
 
-Migrated from [52e407ee3be8](https://github.com/AllenDEricDAlexander/Egon-COLA/tree/52e407ee3be892200aafadb19ad912189f5ada1c). Maven namespace: `top.egon`; npm organization: `@stellar-enclosure`.
-
 ## Build
 
 Requires Java 21 and the included Maven Wrapper. Once the 0.0.1 dependencies are published:
@@ -15,18 +13,20 @@ Requires Java 21 and the included Maven Wrapper. Once the 0.0.1 dependencies are
 Before the first Central publication, clone the eight Java repositories next to one another and bootstrap their artifact graph explicitly:
 
 ```bash
-bash ../Stellar-Enclosure-Parent/scripts/bootstrap-migration.sh \
+bash ../Stellar-Enclosure-Parent/scripts/bootstrap-workspace.sh \
   --workspace "$(cd .. && pwd)" \
-  --local-repository "$(cd .. && pwd)/.migration/maven"
+  --local-repository "$HOME/.m2/repository"
 ```
 
 The bootstrap installs parent/BOM models before building components and business starters in Maven reactor order. It compiles test sources and installs packages with runtime tests disabled. It never runs applications, databases, containers, browsers, or deploy.
+
+Build dependencies use the standard Maven cache. Temporary Maven reactors use the system temporary directory and are removed after both successful and failed builds.
 
 ## Repository boundaries and first publication
 
 The root POM publishes `top.egon:stellar-enclosure-parent:0.0.1`. `platform-parent/pom.xml` publishes the shared platform parent. Neither aggregates sibling repositories during normal builds. Components owns its standalone BOM; COLA owns its archetype parent.
 
-See [accepted migration design](docs/migration-spec.md), [release guide](docs/first-release.md), [repository manifest](migration/repositories.json), and [source ownership inventory](migration/source-inventory.json). Historical design and runbooks are archived under `docs/history` with the source commit as their reference context.
+See the [release guide](docs/first-release.md) and [Maven release order](release/maven-release-order.json). Historical architecture designs and runbooks are archived under `docs/history`.
 
 ## Compatibility and publication
 
