@@ -1,6 +1,5 @@
 import importlib.util
 from pathlib import Path
-import subprocess
 import tempfile
 import unittest
 
@@ -68,12 +67,6 @@ class MavenReleaseOrderTest(unittest.TestCase):
         self.assertEqual(1, len(projects))
         self.assertEqual('3.1.0', projects[0]['version'])
         self.assertTrue(projects[0]['resolvedFacade'])
-
-    def test_workspace_publication_is_rejected_before_any_build(self):
-        result = subprocess.run(['bash', str(SCRIPT.with_name('maven-deploy.sh')), '--publish'],
-                                text=True, capture_output=True)
-        self.assertEqual(2, result.returncode)
-        self.assertIn('Workspace-wide publication has been retired', result.stderr)
 
 
 if __name__ == '__main__':

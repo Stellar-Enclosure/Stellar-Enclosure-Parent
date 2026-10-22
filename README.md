@@ -45,7 +45,7 @@ This repository publishes two independent POMs. Run from this directory with Jav
 ./mvnw -B -ntp -N -f platform-parent/pom.xml -Prelease clean deploy
 ```
 
-The root does not aggregate `platform-parent` or any sibling repository. Initial order is common parent → Components BOM → platform parent → library parents and modules in dependency order. Each GAV may be published once; choose new versions for changed content. The old workspace-wide `scripts/maven-deploy.sh --publish` entry is disabled; its dry run remains available for migration checks. Normal builds and Git pushes do not publish.
+The root does not aggregate `platform-parent` or any sibling repository. Initial order is common parent → Components BOM → platform parent → library parents and modules in dependency order. Each GAV may be published once; choose new versions for changed content. Normal builds and Git pushes do not publish.
 
 ## Compatibility and publication
 
