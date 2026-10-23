@@ -19,7 +19,7 @@ Each repository owns its publication commands in its README. Normal builds and G
 
 ## Maven credentials
 
-Use Java 21 and each repository's Maven Wrapper. The existing `release` profile attaches sources, Javadoc and GPG signatures and publishes with `central-publishing-maven-plugin`. The plugin version remains unchanged. It maps each module's `maven.deploy.skip` to `skipPublishing`; explicit exclusions also protect application and test artifacts. See [Sonatype's plugin configuration](https://central.sonatype.org/publish/publish-portal-maven/#skippublishing).
+Use Java 25 and each repository's Maven Wrapper. The existing `release` profile attaches sources, Javadoc and GPG signatures and publishes with `central-publishing-maven-plugin`. The plugin version remains unchanged. It maps each module's `maven.deploy.skip` to `skipPublishing`; explicit exclusions also protect application and test artifacts. See [Sonatype's plugin configuration](https://central.sonatype.org/publish/publish-portal-maven/#skippublishing).
 
 Before running `deploy`, verify ownership of namespace `top.egon` in Central Portal, generate a Portal user token and configure its token username/password under server ID `central` in your local `~/.m2/settings.xml`. These are Portal token credentials, rather than the account login password. For example, merge the following server into your existing settings without replacing other configuration:
 

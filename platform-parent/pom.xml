@@ -58,11 +58,11 @@
         <stellar-enclosure.tianquan-jianshen.version>0.0.1</stellar-enclosure.tianquan-jianshen.version>
         <stellar-enclosure.tianquan-shoubing.version>0.0.1</stellar-enclosure.tianquan-shoubing.version>
         <stellar-enclosure.tianshu.version>0.0.1</stellar-enclosure.tianshu.version>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <redisson.version>3.26.0</redisson.version>
+        <redisson.version>4.8.0</redisson.version>
         <sqlite.jdbc.version>3.50.3.0</sqlite.jdbc.version>
         <resilience4j.version>2.2.0</resilience4j.version>
         <grpc.version>1.75.0</grpc.version>
@@ -87,6 +87,13 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-bom</artifactId>
+                <version>${grpc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -94,7 +101,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2025.0.3</version>
+                <version>2025.1.4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -382,7 +389,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.12</version>
+                    <version>0.8.14</version>
                 </plugin>
                 <plugin>
                     <groupId>pl.project13.maven</groupId>
@@ -477,7 +484,7 @@
                     <plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <configuration>
-                            <source>21</source>
+                            <source>25</source>
                             <show>protected</show>
                             <charset>UTF-8</charset>
                             <encoding>UTF-8</encoding>
@@ -529,7 +536,7 @@
                                 <configuration>
                                     <rules>
                                         <requireJavaVersion>
-                                            <version>[21,)</version>
+                                            <version>[25,)</version>
                                         </requireJavaVersion>
                                     </rules>
                                 </configuration>

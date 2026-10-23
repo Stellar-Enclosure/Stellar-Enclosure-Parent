@@ -7,7 +7,7 @@ Shared Maven build and release foundations for Stellar Enclosure. All first-part
 | Entry | Function |
 |---|---|
 | [Common parent](pom.xml) | Publishes `stellar-enclosure-parent`; manages the Spring Boot dependency baseline, shared database dependencies and release plugin configuration. |
-| [Platform parent](platform-parent/pom.xml) | Publishes `stellar-enclosure-platform-parent`; sets the Java 21 baseline, imports the Components BOM, manages platform libraries, and configures compiler, test, Protobuf and packaging plugins. |
+| [Platform parent](platform-parent/pom.xml) | Publishes `stellar-enclosure-platform-parent`; sets the Java 25 baseline, imports the Components BOM, manages platform libraries, and configures compiler, test, Protobuf and packaging plugins. |
 | [Workspace bootstrap](scripts/bootstrap-workspace.sh) | Installs prerequisite POMs and builds the eight sibling Java repositories in dependency order before their first public release. Supports explicit workspace/cache paths, offline mode and reactor resume. |
 | [Release inventory](release/maven-release-order.json) and [inventory generator](scripts/maven-release-order.py) | Records artifact ownership, publication exclusions and dependency order for the first Maven Central release. |
 | [Release guide](docs/first-release.md) | Documents credentials, local checks, publication order and recovery after a partial publication. |
@@ -16,7 +16,7 @@ This is a build infrastructure repository: it contains two parent POMs and suppo
 
 ## Build
 
-Requires Java 21 and the included Maven Wrapper. Once the 0.0.1 dependencies are published:
+Requires Java 25 and the included Maven Wrapper. The shared parent manages Spring Boot 4.1.2. Once the 0.0.1 dependencies are published:
 
 ```bash
 ./mvnw -B -ntp test-compile
@@ -37,6 +37,16 @@ The bootstrap installs parent/BOM models before building components and business
 
 Build dependencies use the standard Maven cache. Temporary Maven reactors use the system temporary directory and are removed after both successful and failed builds.
 
+## Java 25 and Spring Boot 4
+
+The common parent sets Java 25 and Spring Boot 4.1.2 for every Java repository and generated application. Platform and archetype parents use Spring Cloud 2025.1.4; the archetype parent also uses Spring Cloud Alibaba 2025.1.0.0. Components uses MyBatis-Plus's Boot 4 starter at 3.5.17, Redisson 4.8.0 and Spring AI 2.0.2. Springdoc is 3.1.1, JaCoCo 0.8.14 supports Java 25 bytecode, and the test-only WireMock baseline is 3.13.2. The platform and Components parents import the gRPC 1.75.0 BOM to keep core, API, stubs and transports on the existing protocol baseline. GitHub Actions, GitLab CI and container templates use Java 25.
+
+Existing business JSON types and serializers continue to use Jackson 2 through Boot's `spring-boot-jackson2` compatibility module. The identity and Tianshu RPC SDK auto-configurations retain the qualified `jacksonObjectMapper` name as an alias when Boot supplies `jackson2ObjectMapper`; an explicitly supplied host mapper keeps its name. Application configurations select `jackson2` with `spring.http.converters.preferred-json-mapper` and `spring.http.codecs.preferred-json-mapper`. Move external Jackson 2 settings from `spring.jackson.*` to `spring.jackson2.*`, matching the checked-in configurations. Jackson 3 remains available to Spring AI and Springdoc. See the [Spring Boot migration guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide) and [Jackson 2 configuration](https://docs.spring.io/spring-boot/4.1/reference/features/json.html).
+
+The archetype async configuration exposes `AsyncConfigurer` through an adapter bean so Boot can decorate it without replacing the configuration object that owns the bean factories. The existing `asyncConfiguration` and executor bean names are retained. Identity authorization providers are decorated through the security post-processing hook so Security 7 can still discover their request validators.
+
+Use a JDK 25 `JAVA_HOME` for Maven and generator subprocesses. Compilation and offline unit tests do not establish database, Redis, OAuth, RPC or application startup acceptance; run those checks in your deployment environment before rollout.
+
 ## Repository boundaries and first publication
 
 The root POM publishes `top.egon:stellar-enclosure-parent:0.0.1`. `platform-parent/pom.xml` publishes the shared platform parent. Neither aggregates sibling repositories during normal builds. Components owns its standalone BOM; COLA owns its archetype parent.
@@ -45,7 +55,7 @@ See the [release guide](docs/first-release.md) and [Maven release order](release
 
 ## Publish to Maven Central
 
-This repository publishes two independent POMs. Run from this directory with Java 21, a Central Portal token configured as Maven server `central`, and a local GPG signing key. See [credentials and initial release order](https://github.com/Stellar-Enclosure/Stellar-Enclosure-Parent/blob/main/docs/first-release.md).
+This repository publishes two independent POMs. Run from this directory with Java 25, a Central Portal token configured as Maven server `central`, and a local GPG signing key. See [credentials and initial release order](https://github.com/Stellar-Enclosure/Stellar-Enclosure-Parent/blob/main/docs/first-release.md).
 
 ```bash
 # Common parent: local release check, then publication.
