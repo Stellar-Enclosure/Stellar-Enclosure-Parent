@@ -1,0 +1,41 @@
+{
+  "web-sdk": {
+    "diffCheck": "PASS"
+  },
+  "portal": {
+    "diffCheck": "PASS",
+    "declaredResources": 13,
+    "literalUsageKeys": 5,
+    "missingDeclarations": []
+  },
+  "tianquan-shoubing-web": {
+    "diffCheck": "PASS",
+    "declaredResources": 52,
+    "literalUsageKeys": 50,
+    "missingDeclarations": []
+  },
+  "tianquan-jianshen-web": {
+    "diffCheck": "PASS",
+    "declaredResources": 67,
+    "literalUsageKeys": 61,
+    "missingDeclarations": []
+  },
+  "tianshu-web": {
+    "diffCheck": "PASS",
+    "declaredResources": 49,
+    "literalUsageKeys": 33,
+    "missingDeclarations": []
+  },
+  "yuheng-web": {
+    "diffCheck": "PASS",
+    "declaredResources": 63,
+    "literalUsageKeys": 61,
+    "missingDeclarations": []
+  },
+  "yaoguang-web": {
+    "diffCheck": "PASS",
+    "declaredResources": 12,
+    "literalUsageKeys": 10,
+    "missingDeclarations": []
+  }
+}

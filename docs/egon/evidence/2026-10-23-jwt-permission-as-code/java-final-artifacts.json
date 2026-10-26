@@ -1,0 +1,278 @@
+{
+  "artifactCount": 9,
+  "artifacts": [
+    {
+      "repository": "tianquan-shoubing-service",
+      "module": "stellar-enclosure-tianquan-shoubing-admin",
+      "producerId": "tianquan-shoubing-java",
+      "artifact": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/target/stellar-enclosure-tianquan-shoubing-admin-exec.jar",
+      "artifactDigest": "a64198a04673fc7ea7eb0a0601b2e3458d1316ce63ca77eac132ce921924c76c",
+      "manifestDigest": "9355463234386a2bf3ce946b1861ae5cd138317b187c43d16550d03430efe7a4",
+      "policyDigest": "4589baaefb3cc9144af699c439cad82b7b9ebd5ee807473aae76a812187c0236",
+      "metadataDigest": "1df97bf20fb0a77f0a8babbc02db3ad604b651bc8465bc427e5b0c7927f57a1a",
+      "resourceCounts": {
+        "API": 60,
+        "FIELD": 193
+      },
+      "permissionDefinitions": 21,
+      "messages": 153,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "module": "stellar-enclosure-tianquan-jianshen-admin",
+      "producerId": "tianquan-jianshen-java",
+      "artifact": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/target/stellar-enclosure-tianquan-jianshen-admin-exec.jar",
+      "artifactDigest": "8647c7bdfcc5af3f800eb9cbee086492907dc262aa8dc44e5239558a4bcdd7af",
+      "manifestDigest": "e9dd78f5399d565c25c1ecc853aeddf34feb833d0bce56252a16ea3cf2e8747c",
+      "policyDigest": "0d59473bfc82df31968e9b94992d25111f551f8a4d60c2ccbf75dd52aa827cf4",
+      "metadataDigest": "43e0c912c9bd161e85cda4ff828991abc40be8bb94d8e30af8295ab2ef363794",
+      "resourceCounts": {
+        "API": 109,
+        "FIELD": 620
+      },
+      "permissionDefinitions": 51,
+      "messages": 422,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "tianshu-service",
+      "module": "stellar-enclosure-tianshu-admin",
+      "producerId": "tianshu-java",
+      "artifact": "tianshu-service/stellar-enclosure-tianshu-admin/target/stellar-enclosure-tianshu-admin-exec.jar",
+      "artifactDigest": "dac6551a07baa2649aa06d7b1887a4a254111a68d3d025a3e2638541c8e71512",
+      "manifestDigest": "3bdf0d76f2f50b5f437aceea32fcec8dfd4b030834c5576b0b70b43a8aca5383",
+      "policyDigest": "32f50ffb7b63804f1d0f1c3638a4c3393dc330e58cd6fbee279ea3e4ca10e22e",
+      "metadataDigest": "fe322d03fc93da64b4f3cd080bba208fc5175ca1a94bbf06b42f2fb65c6dac67",
+      "resourceCounts": {
+        "API": 89,
+        "FIELD": 490
+      },
+      "permissionDefinitions": 9,
+      "messages": 1251,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yaoguang-service",
+      "module": "stellar-enclosure-yaoguang-admin",
+      "producerId": "yaoguang-java",
+      "artifact": "yaoguang-service/stellar-enclosure-yaoguang-admin/target/stellar-enclosure-yaoguang-admin-exec.jar",
+      "artifactDigest": "83c6d56abc9d914e3fee149dc398623e0da030912d450a60d7eecc7efb1a8ab3",
+      "manifestDigest": "4e882a1ed95546dddf73d02972fbdbcfb073a6c6d753f1d00ee4c8343975a6a7",
+      "policyDigest": "5441dee94e4266152a9471e534e00715a9ea785538941f12feb501ef119a74aa",
+      "metadataDigest": "fc5a51151fe051ab095b78f21b9b787ca50d06e082cf862f994d75342bc2cafa",
+      "resourceCounts": {
+        "API": 25,
+        "FIELD": 189
+      },
+      "permissionDefinitions": 3,
+      "messages": 103,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yuheng-service",
+      "module": "stellar-enclosure-yuheng-admin",
+      "producerId": "yuheng-admin-java",
+      "artifact": "yuheng-service/stellar-enclosure-yuheng-admin/target/stellar-enclosure-yuheng-admin-exec.jar",
+      "artifactDigest": "063fa124471a401e3d97f1fb6989ed849804f1aa395ed1c20c30564526ebddd5",
+      "manifestDigest": "faca31c852b05d91aef120351d2b4dac49bb3fac3f8e3cc97d2cd0d4a1aac9e5",
+      "policyDigest": "23030b6f20737a62b5a7c12daa36b45973a9c216897a6ebbd1b08e4c9bf77a7b",
+      "metadataDigest": "ffc2387d21e19123472331f74820d402c029e85a66517c6441493871a82dd60b",
+      "resourceCounts": {
+        "API": 95,
+        "FIELD": 816
+      },
+      "permissionDefinitions": 14,
+      "messages": 434,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yuheng-service",
+      "module": "stellar-enclosure-yuheng-llm-gateway",
+      "producerId": "yuheng-llm-java",
+      "artifact": "yuheng-service/stellar-enclosure-yuheng-llm-gateway/target/stellar-enclosure-yuheng-llm-gateway-exec.jar",
+      "artifactDigest": "94385d44c603ebec884a79c7c882eb53fdbb625179485c7573b50526d13759d8",
+      "manifestDigest": "a312be2371dcf1befc8b6aec12ddaf93c7a3cafb7b2b1994fc13032c6c6ecfda",
+      "policyDigest": "133c3727f94732e70bec89bace84301314bd2c4a2298adea424742b2875cd8fd",
+      "metadataDigest": "f9ea5dcfdd12e766d5c2e0d1bc1d395d62b679f6652bab8ec994d689aef6632d",
+      "resourceCounts": {
+        "API": 7,
+        "FIELD": 0
+      },
+      "permissionDefinitions": 0,
+      "messages": 7,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yuheng-service",
+      "module": "stellar-enclosure-yuheng-biz-gateway",
+      "producerId": "yuheng-biz-java",
+      "artifact": "yuheng-service/stellar-enclosure-yuheng-biz-gateway/target/stellar-enclosure-yuheng-biz-gateway-exec.jar",
+      "artifactDigest": "21598561b5f93f1c04c57fdd2f01e59be7f45ca4bb706cbf7f9eea4e24e4542d",
+      "manifestDigest": "95de772eab91a45f551469eee6a34fd2b1b16063cd3b8df1061e0c2de722af95",
+      "policyDigest": "0069bc568276ab80fd6936cc0b8621e3f5b1764497345eb75a3aa12abaaddbf0",
+      "metadataDigest": "dde0fb828e3ff4a5b885f99c811b87ff7f842a3bb42a693d1c04c7be823d5521",
+      "resourceCounts": {
+        "API": 5,
+        "FIELD": 0
+      },
+      "permissionDefinitions": 0,
+      "messages": 5,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yuheng-service",
+      "module": "stellar-enclosure-yuheng-mcp-gateway",
+      "producerId": "yuheng-mcp-java",
+      "artifact": "yuheng-service/stellar-enclosure-yuheng-mcp-gateway/target/stellar-enclosure-yuheng-mcp-gateway-exec.jar",
+      "artifactDigest": "cd0011921f5e5806881382aa7a65257bb674f7a7f7571dc0aba6e85dc6446054",
+      "manifestDigest": "a1cad3859d6f46686cd9eb6fb96f2447ae81fb0a5d1e2fa38d5c1141867f19c6",
+      "policyDigest": "ce222a6d9994fc3039816a97cec19f955c1d141c0052a22500f1d2e7f884a159",
+      "metadataDigest": "71c161896f905ab01e1af602799859910a1749ebdadf5622a24a2b9b6c13baeb",
+      "resourceCounts": {
+        "API": 6,
+        "FIELD": 0
+      },
+      "permissionDefinitions": 0,
+      "messages": 6,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    },
+    {
+      "repository": "yuheng-service",
+      "module": "stellar-enclosure-yuheng-edge-gateway",
+      "producerId": "yuheng-edge-java",
+      "artifact": "yuheng-service/stellar-enclosure-yuheng-edge-gateway/target/stellar-enclosure-yuheng-edge-gateway-0.0.1-exec.jar",
+      "artifactDigest": "7c38c49f7ea80d58503175d644eeaf3b77a392055d45be4eb59481e9975ea3c5",
+      "manifestDigest": "b9cce2d8b3b6522fb8aadd89b2669869f5fa83cd6ecd73a31be91c08c1fbba4b",
+      "policyDigest": "7abc9ec5649a165fa61f454eae986124fdaab841967190cb81dc546ea733a194",
+      "metadataDigest": "e22977ae745960ab232bd73fefeae437d2b2498c78728a2568be0a9d9ef78f03",
+      "resourceCounts": {
+        "API": 9,
+        "FIELD": 21
+      },
+      "permissionDefinitions": 0,
+      "messages": 30,
+      "embeddedManifestExact": true,
+      "processorOrCliRuntimeDependency": false,
+      "deploymentVerified": false
+    }
+  ],
+  "nodeValidation": [
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianquan-shoubing-java",
+      "commit": "49122f8f94a39e43763f165885171f0d3729a480",
+      "workingTreeChanged": true,
+      "artifactDigest": "a64198a04673fc7ea7eb0a0601b2e3458d1316ce63ca77eac132ce921924c76c",
+      "policyDigest": "4589baaefb3cc9144af699c439cad82b7b9ebd5ee807473aae76a812187c0236",
+      "metadataDigest": "1df97bf20fb0a77f0a8babbc02db3ad604b651bc8465bc427e5b0c7927f57a1a",
+      "manifestDigest": "9355463234386a2bf3ce946b1861ae5cd138317b187c43d16550d03430efe7a4"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianquan-jianshen-java",
+      "commit": "b2e80d31a8c559e5b6e8ad98d6599bb198e9643c",
+      "workingTreeChanged": true,
+      "artifactDigest": "8647c7bdfcc5af3f800eb9cbee086492907dc262aa8dc44e5239558a4bcdd7af",
+      "policyDigest": "0d59473bfc82df31968e9b94992d25111f551f8a4d60c2ccbf75dd52aa827cf4",
+      "metadataDigest": "43e0c912c9bd161e85cda4ff828991abc40be8bb94d8e30af8295ab2ef363794",
+      "manifestDigest": "e9dd78f5399d565c25c1ecc853aeddf34feb833d0bce56252a16ea3cf2e8747c"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianshu-java",
+      "commit": "a7d04077c6cffd6aa611e071214470dc1b66df61",
+      "workingTreeChanged": true,
+      "artifactDigest": "dac6551a07baa2649aa06d7b1887a4a254111a68d3d025a3e2638541c8e71512",
+      "policyDigest": "32f50ffb7b63804f1d0f1c3638a4c3393dc330e58cd6fbee279ea3e4ca10e22e",
+      "metadataDigest": "fe322d03fc93da64b4f3cd080bba208fc5175ca1a94bbf06b42f2fb65c6dac67",
+      "manifestDigest": "3bdf0d76f2f50b5f437aceea32fcec8dfd4b030834c5576b0b70b43a8aca5383"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yaoguang-java",
+      "commit": "5a99609a986851eab05200072910d387dfafe218",
+      "workingTreeChanged": true,
+      "artifactDigest": "83c6d56abc9d914e3fee149dc398623e0da030912d450a60d7eecc7efb1a8ab3",
+      "policyDigest": "5441dee94e4266152a9471e534e00715a9ea785538941f12feb501ef119a74aa",
+      "metadataDigest": "fc5a51151fe051ab095b78f21b9b787ca50d06e082cf862f994d75342bc2cafa",
+      "manifestDigest": "4e882a1ed95546dddf73d02972fbdbcfb073a6c6d753f1d00ee4c8343975a6a7"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-admin-java",
+      "commit": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "workingTreeChanged": true,
+      "artifactDigest": "063fa124471a401e3d97f1fb6989ed849804f1aa395ed1c20c30564526ebddd5",
+      "policyDigest": "23030b6f20737a62b5a7c12daa36b45973a9c216897a6ebbd1b08e4c9bf77a7b",
+      "metadataDigest": "ffc2387d21e19123472331f74820d402c029e85a66517c6441493871a82dd60b",
+      "manifestDigest": "faca31c852b05d91aef120351d2b4dac49bb3fac3f8e3cc97d2cd0d4a1aac9e5"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-llm-java",
+      "commit": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "workingTreeChanged": true,
+      "artifactDigest": "94385d44c603ebec884a79c7c882eb53fdbb625179485c7573b50526d13759d8",
+      "policyDigest": "133c3727f94732e70bec89bace84301314bd2c4a2298adea424742b2875cd8fd",
+      "metadataDigest": "f9ea5dcfdd12e766d5c2e0d1bc1d395d62b679f6652bab8ec994d689aef6632d",
+      "manifestDigest": "a312be2371dcf1befc8b6aec12ddaf93c7a3cafb7b2b1994fc13032c6c6ecfda"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-biz-java",
+      "commit": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "workingTreeChanged": true,
+      "artifactDigest": "21598561b5f93f1c04c57fdd2f01e59be7f45ca4bb706cbf7f9eea4e24e4542d",
+      "policyDigest": "0069bc568276ab80fd6936cc0b8621e3f5b1764497345eb75a3aa12abaaddbf0",
+      "metadataDigest": "dde0fb828e3ff4a5b885f99c811b87ff7f842a3bb42a693d1c04c7be823d5521",
+      "manifestDigest": "95de772eab91a45f551469eee6a34fd2b1b16063cd3b8df1061e0c2de722af95"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-mcp-java",
+      "commit": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "workingTreeChanged": true,
+      "artifactDigest": "cd0011921f5e5806881382aa7a65257bb674f7a7f7571dc0aba6e85dc6446054",
+      "policyDigest": "ce222a6d9994fc3039816a97cec19f955c1d141c0052a22500f1d2e7f884a159",
+      "metadataDigest": "71c161896f905ab01e1af602799859910a1749ebdadf5622a24a2b9b6c13baeb",
+      "manifestDigest": "a1cad3859d6f46686cd9eb6fb96f2447ae81fb0a5d1e2fa38d5c1141867f19c6"
+    },
+    {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-edge-java",
+      "commit": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "workingTreeChanged": true,
+      "artifactDigest": "7c38c49f7ea80d58503175d644eeaf3b77a392055d45be4eb59481e9975ea3c5",
+      "policyDigest": "7abc9ec5649a165fa61f454eae986124fdaab841967190cb81dc546ea733a194",
+      "metadataDigest": "e22977ae745960ab232bd73fefeae437d2b2498c78728a2568be0a9d9ef78f03",
+      "manifestDigest": "b9cce2d8b3b6522fb8aadd89b2669869f5fa83cd6ecd73a31be91c08c1fbba4b"
+    }
+  ],
+  "externalRuntimeVerified": false
+}

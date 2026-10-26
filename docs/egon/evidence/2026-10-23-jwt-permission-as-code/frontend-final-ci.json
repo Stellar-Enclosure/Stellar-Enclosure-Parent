@@ -1,0 +1,33 @@
+{
+  "githubWorkflowCount": 13,
+  "actionlint": "PASS",
+  "gitlabYamlCount": 7,
+  "gitlabYaml": "PASS",
+  "frontendAdapters": {
+    "portal": {
+      "offlineTests": 9,
+      "status": "PASS"
+    },
+    "tianquan-shoubing-web": {
+      "offlineTests": 9,
+      "status": "PASS"
+    },
+    "tianquan-jianshen-web": {
+      "offlineTests": 9,
+      "status": "PASS"
+    },
+    "tianshu-web": {
+      "offlineTests": 9,
+      "status": "PASS"
+    },
+    "yuheng-web": {
+      "offlineTests": 9,
+      "status": "PASS"
+    },
+    "yaoguang-web": {
+      "offlineTests": 9,
+      "status": "PASS"
+    }
+  },
+  "externalCi": "NOT_RUN"
+}

@@ -339,6 +339,19 @@
       ]
     },
     {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-processor/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen-processor",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-jianshen",
+        "stellar-enclosure-tianquan-jianshen-contract"
+      ]
+    },
+    {
       "repository": "Stellar-Enclosure-Components",
       "pom": "Stellar-Enclosure-Components/stellar-enclosure-component-access-guard-starter/pom.xml",
       "groupId": "top.egon",
@@ -493,6 +506,20 @@
       "dependsOn": [
         "stellar-enclosure-component-common-core",
         "stellar-enclosure-components-parent"
+      ]
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "pom": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-manifest-cli/pom.xml",
+      "groupId": "top.egon",
+      "artifactId": "stellar-enclosure-tianquan-jianshen-manifest-cli",
+      "version": "0.0.1",
+      "packaging": "jar",
+      "resolvedFacade": false,
+      "dependsOn": [
+        "stellar-enclosure-tianquan-jianshen",
+        "stellar-enclosure-tianquan-jianshen-contract",
+        "stellar-enclosure-tianquan-jianshen-processor"
       ]
     },
     {
@@ -763,6 +790,8 @@
         "stellar-enclosure-component-common-crypto",
         "stellar-enclosure-component-common-id-starter",
         "stellar-enclosure-component-common-trace",
+        "stellar-enclosure-tianquan-jianshen-contract",
+        "stellar-enclosure-tianquan-jianshen-processor",
         "stellar-enclosure-tianquan-shoubing-starter",
         "stellar-enclosure-tianshu"
       ]

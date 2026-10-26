@@ -1,0 +1,52 @@
+{
+  "tianquan-shoubing-web": {
+    "fieldReferences": 68,
+    "backendManifestSha256": "d399ee5bc8c154e1d69163c1a815c485d3172cab2b360d4fced118a2e50fcf9d",
+    "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/target/classes/META-INF/permissions/manifest-v1.json",
+    "missingBackend": [],
+    "nonWriteFields": [],
+    "backendSnapshotMode": "FULL",
+    "status": "PASS",
+    "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+  },
+  "tianquan-jianshen-web": {
+    "fieldReferences": 170,
+    "backendManifestSha256": "e5ec35230d1a8b76ba2a2c971c0284d42804d07b62bf2e62c2a2dbd535af90a6",
+    "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/target/permissions/manifest-v1.json",
+    "missingBackend": [],
+    "nonWriteFields": [],
+    "backendSnapshotMode": "FULL",
+    "status": "PASS",
+    "backendBuildId": "local-s27-r-service-proof-20261026"
+  },
+  "tianshu-web": {
+    "fieldReferences": 95,
+    "backendManifestSha256": "3bdf0d76f2f50b5f437aceea32fcec8dfd4b030834c5576b0b70b43a8aca5383",
+    "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianshu-service/stellar-enclosure-tianshu-admin/target/classes/META-INF/permissions/manifest-v1.json",
+    "missingBackend": [],
+    "nonWriteFields": [],
+    "backendSnapshotMode": "FULL",
+    "status": "PASS",
+    "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+  },
+  "yuheng-web": {
+    "fieldReferences": 186,
+    "backendManifestSha256": "faca31c852b05d91aef120351d2b4dac49bb3fac3f8e3cc97d2cd0d4a1aac9e5",
+    "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/yuheng-service/stellar-enclosure-yuheng-admin/target/classes/META-INF/permissions/manifest-v1.json",
+    "missingBackend": [],
+    "nonWriteFields": [],
+    "backendSnapshotMode": "FULL",
+    "status": "PASS",
+    "backendBuildId": "local-s27-y"
+  },
+  "yaoguang-web": {
+    "fieldReferences": 41,
+    "backendManifestSha256": "4e882a1ed95546dddf73d02972fbdbcfb073a6c6d753f1d00ee4c8343975a6a7",
+    "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/yaoguang-service/stellar-enclosure-yaoguang-admin/target/classes/META-INF/permissions/manifest-v1.json",
+    "missingBackend": [],
+    "nonWriteFields": [],
+    "backendSnapshotMode": "FULL",
+    "status": "PASS",
+    "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+  }
+}

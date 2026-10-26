@@ -68,6 +68,29 @@ class MavenReleaseOrderTest(unittest.TestCase):
         self.assertEqual('3.1.0', projects[0]['version'])
         self.assertTrue(projects[0]['resolvedFacade'])
 
+    def test_build_only_processor_and_cli_precede_producer(self):
+        for name in ['contract', 'processor', 'manifest-cli']:
+            dependency = '' if name == 'contract' else (
+                '<dependencies><dependency><groupId>top.egon</groupId>'
+                '<artifactId>stellar-enclosure-contract</artifactId></dependency></dependencies>')
+            self.pom('tianquan-jianshen-service/' + name, 'stellar-enclosure-' + name,
+                     '<groupId>top.egon</groupId><version>1</version>' + dependency)
+        self.pom('tianshu-service', 'stellar-enclosure-a-producer',
+                 '<groupId>top.egon</groupId><version>1</version>'
+                 '<profiles><profile><id>permission-producer</id><build><plugins>'
+                 '<plugin><artifactId>maven-compiler-plugin</artifactId><executions><execution><configuration>'
+                 '<annotationProcessorPaths><path><groupId>top.egon</groupId>'
+                 '<artifactId>stellar-enclosure-processor</artifactId></path></annotationProcessorPaths>'
+                 '</configuration></execution></executions></plugin>'
+                 '<plugin><artifactId>exec-maven-plugin</artifactId><dependencies><dependency>'
+                 '<groupId>top.egon</groupId><artifactId>stellar-enclosure-manifest-cli</artifactId>'
+                 '</dependency></dependencies></plugin></plugins></build></profile></profiles>')
+        projects = release_order.prepare(self.workspace)
+        producer = projects[-1]
+        self.assertEqual('stellar-enclosure-a-producer', producer['artifactId'])
+        self.assertEqual(['stellar-enclosure-manifest-cli', 'stellar-enclosure-processor'], producer['dependsOn'])
+        self.assertEqual('stellar-enclosure-contract', projects[0]['artifactId'])
+
 
 if __name__ == '__main__':
     unittest.main()

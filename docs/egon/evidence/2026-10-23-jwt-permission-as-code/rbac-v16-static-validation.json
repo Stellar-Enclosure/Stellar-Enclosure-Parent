@@ -1,0 +1,16 @@
+{
+  "migration": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V16__permission_catalog_and_runtime.sql",
+  "sha256": "1dd6fe1d25ddb69303e7ba0cac230c70612890b10b94df3dfe8fb4f0dae1fa12",
+  "createdDate": "2026-10-25",
+  "tables": 23,
+  "sqlStatements": 92,
+  "plpgsqlFunctions": 15,
+  "foreignKeysCheckedIncludingBaseline": 115,
+  "status": "STATIC_VALIDATED_NOT_DATABASE_VERIFIED",
+  "evidence": "/tmp/stellar-pac-20261023-implementation/check-rbac-schema.py",
+  "notes": [
+    "JSONB storage ceiling is twice the canonical limit; shared contract enforces canonical byte limits.",
+    "Snapshot lookup is nonunique to permit renewal at unchanged authority versions; head uses exact composite FK and CAS.",
+    "Existing migrations remain immutable; this migration is immutable from creation."
+  ]
+}

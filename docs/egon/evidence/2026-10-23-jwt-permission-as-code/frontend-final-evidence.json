@@ -1,0 +1,362 @@
+{
+  "recordedAt": "2026-10-26T07:09:39.938469+00:00",
+  "status": "OFFLINE_SOURCE_AND_ARTIFACT_VERIFIED",
+  "toolchain": {
+    "schemaVersion": 1,
+    "mode": "LOCAL_UNCOMMITTED",
+    "nodeMajor": 24,
+    "sdk": {
+      "commit": null,
+      "sourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "dependencyLockSha256": "d2c4c8f5c4dc82c71d116f26dd1e05969868fb1465f33f688654584737973598"
+    },
+    "contract": {
+      "coordinates": "top.egon:stellar-enclosure-tianquan-jianshen-contract:0.0.1",
+      "sha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "entries": {
+        "permission-manifest/schema-v1.json": "eab9125dee3357ef69221f9a28b5a17c2fe04da2a012f0e4f4538c8d4ac84e6c",
+        "permission-contract/manifest-v1.json": "844aa3391c9d965a4a94c312c6baea0e37db19c3961246bc4520dda4b4a41a87",
+        "permission-contract/canonical-v1.json": "d800806726fc9a50cf9298196115bed1c17aaabb577244d8db7b56a41030cb09",
+        "permission-contract/requirements-v1.json": "8ce0b647ac49944c0d7be2a7b9eb38a1a67c8eb722a1b11a4ad0395d09fb141a",
+        "permission-contract/locales-v1.json": "b2ea0d0e4c5c4de2ebee49bcec6bb8365e9a9505e6ecce80b4547fee8bd467a1"
+      }
+    },
+    "contractDirectory": ".generated/permission-contract"
+  },
+  "sdk": {
+    "typecheck": "PASS",
+    "tests": {
+      "shared": 78,
+      "react": 37,
+      "node": 140,
+      "failed": 0,
+      "skipped": 0
+    },
+    "lint": "PASS",
+    "testLog": "/tmp/stellar-pac-20261023-implementation/frontend-final-sdk-c018-tests.log",
+    "packages": [
+      {
+        "name": "@stellar-enclosure/stellar-enclosure-web-shared",
+        "integrity": "sha512-TESP1sF2Nvl/wAJAZayM8UNbCWaOIWnGndnva8lgbI7p4+cMqqZqeO8CYJPIdtmNqkE1v8Jhc+bTd9ZPbplLUA==",
+        "verifiedTarballSha256": "d7f4cac3a2ce81414bf5365aa7fe429d3c529ead055a347f5097def0e64990e7"
+      },
+      {
+        "name": "@stellar-enclosure/stellar-enclosure-tianquan-jianshen-react-sdk",
+        "integrity": "sha512-m16immQ4ZxhyATE9pM/xHruzfSu9mOhw09n1D3IGjVt0DBj/1uLEgqBWZhg1+enUYWx64NigtEyp8UccfzQ3rQ==",
+        "verifiedTarballSha256": "c5a1acf4dca69d15b964b414420374f8c61cbda96707f92fcbd3b045ba3ca4cd"
+      }
+    ]
+  },
+  "frontends": {
+    "portal": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "portal-web",
+      "commit": "f82568ac730c57cc2e7b7f23e8b312a30429a602",
+      "workingTreeChanged": true,
+      "artifactDigest": "77f5d0133f7eddae4a8b1d3898340137baa8c0120df7243aea984155b4bf8f8c",
+      "policyDigest": "342f97890ebe1692ee5a0f4783c02abca1a141c98fdc43cc59de7c259df264cd",
+      "metadataDigest": "3a50cb163eb548373ee2f7d8b9c315bfb025a3e674f6104d056b06b5f990e9dd",
+      "manifestDigest": "b709a1271e9d15f05f72b5809d10bad4866ba88d70534b7161e8dcbbbd223706",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "frontend-final-portal",
+      "resourceCount": 13,
+      "fieldReferences": 0,
+      "artifactFileCount": 7,
+      "tests": {
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-final-portal-tests.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "PASS"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    },
+    "tianquan-shoubing-web": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianquan-shoubing-web",
+      "commit": "ebb7244a30d5e739358fa433d8ce5502aff9f0cc",
+      "workingTreeChanged": true,
+      "artifactDigest": "fb41844a4be9e871090b84ec050109223240ed551fefac0e5ae4c0f73cceff51",
+      "policyDigest": "2da1ff7250a9fd4be89c2e359ea9919bec1c3543dbd8d3be2dd307839455db76",
+      "metadataDigest": "d307ab9f7a1943c1631a2cf605f26f4ddbfeaee56c8972b49f9d5ca5ae791cc5",
+      "manifestDigest": "394b8cfd5752c0c8b68b3df42367ce8da4ab8f9892ca5e42dfbeb608d5944f4a",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "frontend-final-tianquan-shoubing-web",
+      "resourceCount": 52,
+      "fieldReferences": 68,
+      "artifactFileCount": 29,
+      "tests": {
+        "passed": 62,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-final-tianquan-shoubing-web-tests.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "UNCHANGED_BASELINE_FAILURE",
+        "errors": 2,
+        "warnings": 0,
+        "currentLog": "/tmp/stellar-pac-20261023-implementation/frontend-final-tianquan-shoubing-web-lint.log",
+        "baselineLog": "/tmp/stellar-pac-20261023-implementation/frontend-head-tianquan-shoubing-web-lint.log"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    },
+    "tianquan-jianshen-web": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianquan-jianshen-web",
+      "commit": "763b54b20b8949392175c4e7c005fa437797c954",
+      "workingTreeChanged": true,
+      "artifactDigest": "3e48b4f5790f9a88a57e9255b53f1ff3387be67adc4fbcc37b13e7b4b7ad1b15",
+      "policyDigest": "641be3710acf69e8aaee8c2c585724bd3dc9b0e0628f787dfededd86c33801db",
+      "metadataDigest": "df8772b6c262ad6375fe554da940aaa2a05c84773673d309e39cf7987599c0ba",
+      "manifestDigest": "1bb133aec001399b6f7d1d41fb659ac1a4d521ad74b4b314b02b196e567ed7c6",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "frontend-final-tianquan-jianshen-web",
+      "resourceCount": 67,
+      "fieldReferences": 170,
+      "artifactFileCount": 11,
+      "tests": {
+        "passed": 80,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-final-tianquan-jianshen-web-tests.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "PASS"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-tianquan-jianshen-react-sdk/dependencies",
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-tianquan-jianshen-react-sdk/integrity",
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    },
+    "tianshu-web": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "tianshu-web",
+      "commit": "bf5ca46d6e60a9bb69cd6dbe4fe4c105087175aa",
+      "workingTreeChanged": true,
+      "artifactDigest": "fe48191bc877aeb21437ce8bb0f610627ad353de3fdf652ac1b5ebf5169ad16f",
+      "policyDigest": "6c343d777a9e9ad8f3f7f8d5e07562f60459efb0fb7461d1c631960a192686be",
+      "metadataDigest": "7b7ebcc747ea0b9bfadd9322a1b359b68d2c1c47caa384aedfd2c614bda93ec5",
+      "manifestDigest": "46ab4ed3643e76afc6ae1a3317f293367f2fe357f1997d3884d6b8d1a8ebd8d3",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "local-c3a3702d-e37f-4a05-b10e-8bdaa56c8857",
+      "resourceCount": 49,
+      "fieldReferences": 95,
+      "artifactFileCount": 5,
+      "tests": {
+        "passed": 189,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-rc-final-six-verify.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "UNCHANGED_BASELINE_FAILURE",
+        "errors": 10,
+        "warnings": 1,
+        "currentLog": "/tmp/stellar-pac-20261023-implementation/frontend-final-tianshu-web-lint.log",
+        "baselineLog": "/tmp/stellar-pac-20261023-implementation/frontend-head-tianshu-web-lint.log"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    },
+    "yuheng-web": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yuheng-web",
+      "commit": "ce4ff9c64420466f3f4d5276f6e25b813e294044",
+      "workingTreeChanged": true,
+      "artifactDigest": "f379b048297281e3256c3a53f9fbc8ae840ea6c92b9033d07abab4c5061f1a14",
+      "policyDigest": "1c29dd09de15271593b571235194b5c1ee9f69e3d18b65369feb81f2bf9d676d",
+      "metadataDigest": "8f57bd8c09812f1d2552885f150e10962efe1090693e8dde7e6e4e7c8aa03fa3",
+      "manifestDigest": "a9b5de6cffa158e312372cb840e58f556b48acff83b03583d69f466090e50dda",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "local-e5a45feb-4dce-4622-af56-f4fa8363c1d4",
+      "resourceCount": 63,
+      "fieldReferences": 186,
+      "artifactFileCount": 46,
+      "tests": {
+        "passed": 169,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-final-yuheng-web-tests.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "UNCHANGED_BASELINE_FAILURE",
+        "errors": 7,
+        "warnings": 0,
+        "currentLog": "/tmp/stellar-pac-20261023-implementation/frontend-final-yuheng-web-lint.log",
+        "baselineLog": "/tmp/stellar-pac-20261023-implementation/frontend-head-yuheng-web-lint.log"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    },
+    "yaoguang-web": {
+      "status": "VERIFIED_ARTIFACT",
+      "mode": "LOCAL_UNCOMMITTED",
+      "producerId": "yaoguang-web",
+      "commit": "e831a74b9c50fbe9df45c4550ddf0cde52b289aa",
+      "workingTreeChanged": true,
+      "artifactDigest": "c74eee0fc40f511560ad1eb2d0486ef85ad702d860d0563280fc51abb4947702",
+      "policyDigest": "d4a8cc12139df2c5af84d09086cfe0d7a8adb4a733f76f955c0db9b65a1a3587",
+      "metadataDigest": "b3dae323a32267349d94938cb2697d88c5c5ef8d9a42326191e9e747a418bbc3",
+      "manifestDigest": "52e80079f1703c8d7a747d6a456dcd926dc068a9f062332ec881381e5a7c91e5",
+      "browserBundle": "PASS",
+      "contractSha256": "c018a124bce8ee97c8403367f83802dc56fd1cea7bfe04fd68b24b051abeb9c6",
+      "toolSourceDigest": "561b09e48d9c9844bc07eef9ab75adb5fc4ababb7fd45dcad19cadd234e8d548",
+      "buildId": "frontend-final-yaoguang-web",
+      "resourceCount": 12,
+      "fieldReferences": 41,
+      "artifactFileCount": 13,
+      "tests": {
+        "passed": 69,
+        "failed": 0,
+        "skipped": 0,
+        "log": "/tmp/stellar-pac-20261023-implementation/frontend-final-yaoguang-web-tests.log"
+      },
+      "typecheck": "PASS",
+      "build": "PASS",
+      "offlineInstall": "PASS",
+      "lint": {
+        "status": "UNCHANGED_BASELINE_FAILURE",
+        "errors": 2,
+        "warnings": 0,
+        "currentLog": "/tmp/stellar-pac-20261023-implementation/frontend-final-yaoguang-web-lint.log",
+        "baselineLog": "/tmp/stellar-pac-20261023-implementation/frontend-head-yaoguang-web-lint.log"
+      },
+      "lockDiffPaths": [
+        "/packages/node_modules/@stellar-enclosure/stellar-enclosure-web-shared/integrity"
+      ]
+    }
+  },
+  "frontendTestTotal": 603,
+  "fieldReferenceClosure": {
+    "tianquan-shoubing-web": {
+      "fieldReferences": 68,
+      "backendManifestSha256": "d399ee5bc8c154e1d69163c1a815c485d3172cab2b360d4fced118a2e50fcf9d",
+      "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/target/classes/META-INF/permissions/manifest-v1.json",
+      "missingBackend": [],
+      "nonWriteFields": [],
+      "backendSnapshotMode": "FULL",
+      "status": "PASS",
+      "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+    },
+    "tianquan-jianshen-web": {
+      "fieldReferences": 170,
+      "backendManifestSha256": "e5ec35230d1a8b76ba2a2c971c0284d42804d07b62bf2e62c2a2dbd535af90a6",
+      "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/target/permissions/manifest-v1.json",
+      "missingBackend": [],
+      "nonWriteFields": [],
+      "backendSnapshotMode": "FULL",
+      "status": "PASS",
+      "backendBuildId": "local-s27-r-service-proof-20261026"
+    },
+    "tianshu-web": {
+      "fieldReferences": 95,
+      "backendManifestSha256": "3bdf0d76f2f50b5f437aceea32fcec8dfd4b030834c5576b0b70b43a8aca5383",
+      "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/tianshu-service/stellar-enclosure-tianshu-admin/target/classes/META-INF/permissions/manifest-v1.json",
+      "missingBackend": [],
+      "nonWriteFields": [],
+      "backendSnapshotMode": "FULL",
+      "status": "PASS",
+      "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+    },
+    "yuheng-web": {
+      "fieldReferences": 186,
+      "backendManifestSha256": "faca31c852b05d91aef120351d2b4dac49bb3fac3f8e3cc97d2cd0d4a1aac9e5",
+      "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/yuheng-service/stellar-enclosure-yuheng-admin/target/classes/META-INF/permissions/manifest-v1.json",
+      "missingBackend": [],
+      "nonWriteFields": [],
+      "backendSnapshotMode": "FULL",
+      "status": "PASS",
+      "backendBuildId": "local-s27-y"
+    },
+    "yaoguang-web": {
+      "fieldReferences": 41,
+      "backendManifestSha256": "4e882a1ed95546dddf73d02972fbdbcfb073a6c6d753f1d00ee4c8343975a6a7",
+      "backendManifest": "/Users/mario/SelfProject/Stellar-Enclosure/yaoguang-service/stellar-enclosure-yaoguang-admin/target/classes/META-INF/permissions/manifest-v1.json",
+      "missingBackend": [],
+      "nonWriteFields": [],
+      "backendSnapshotMode": "FULL",
+      "status": "PASS",
+      "backendBuildId": "LOCAL_UNCOMMITTED-final-reviewed"
+    }
+  },
+  "ci": {
+    "githubWorkflowCount": 13,
+    "actionlint": "PASS",
+    "gitlabYamlCount": 7,
+    "gitlabYaml": "PASS",
+    "frontendAdapters": {
+      "portal": {
+        "offlineTests": 9,
+        "status": "PASS"
+      },
+      "tianquan-shoubing-web": {
+        "offlineTests": 9,
+        "status": "PASS"
+      },
+      "tianquan-jianshen-web": {
+        "offlineTests": 9,
+        "status": "PASS"
+      },
+      "tianshu-web": {
+        "offlineTests": 9,
+        "status": "PASS"
+      },
+      "yuheng-web": {
+        "offlineTests": 9,
+        "status": "PASS"
+      },
+      "yaoguang-web": {
+        "offlineTests": 9,
+        "status": "PASS"
+      }
+    },
+    "externalCi": "NOT_RUN"
+  },
+  "limitations": [
+    "LOCAL_UNCOMMITTED evidence; no actual committed immutable SDK pin exists",
+    "Registry publication and registry cold installation NOT_RUN",
+    "Real remote CI, deployment/readiness, registration and activation NOT_RUN",
+    "Real PostgreSQL, browser/SSO and network integration NOT_RUN",
+    "Application/server/database/container/browser/GUI startup not performed",
+    "No commit or push performed"
+  ]
+}

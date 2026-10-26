@@ -61,9 +61,18 @@ def prepare(workspace: Path) -> list[dict]:
             if dep.findtext('m:scope',namespaces=NS)=='import':
                 aid=dep.findtext('m:artifactId',namespaces=NS)
                 if aid:dependencies.add(aid)
-        for plugin in root.findall('m:build/m:plugins/m:plugin',NS):
+        # Compiler processors and build-only CLI dependencies must exist before a producer can package.
+        plugins = root.findall('m:build/m:plugins/m:plugin',NS)
+        plugins += root.findall('m:profiles/m:profile/m:build/m:plugins/m:plugin',NS)
+        for plugin in plugins:
             aid=plugin.findtext('m:artifactId',namespaces=NS)
-            if aid:dependencies.add(aid)
+            if aid:dependencies.add(resolve(aid))
+            for dep in plugin.findall('m:dependencies/m:dependency',NS):
+                aid=dep.findtext('m:artifactId',namespaces=NS)
+                if aid:dependencies.add(resolve(aid))
+            for processor in plugin.findall('.//m:annotationProcessorPaths/m:path',NS):
+                aid=processor.findtext('m:artifactId',namespaces=NS)
+                if aid:dependencies.add(resolve(aid))
         item={'repository':relative.parts[0],'pom':relative.as_posix(),'groupId':group,'artifactId':artifact,'version':version,'packaging':root.findtext('m:packaging',default='jar',namespaces=NS),'resolvedFacade':source,'dependsOn':sorted(dependencies)}
         if artifact in projects and projects[artifact]['pom']!=item['pom']:raise ValueError('Duplicate artifact: '+artifact)
         projects[artifact]=item

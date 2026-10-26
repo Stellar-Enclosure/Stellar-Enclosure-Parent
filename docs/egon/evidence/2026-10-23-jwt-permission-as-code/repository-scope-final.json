@@ -1,0 +1,118 @@
+{
+  "repositories": [
+    {
+      "repository": ".github",
+      "head": "c460fe220625077f53e7e1f704a668ed0de8c0d5",
+      "branch": "main",
+      "changedPaths": 0
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "head": "8fea01fea1f913cf921a7b4cc3393a55b0c525b9",
+      "branch": "main",
+      "changedPaths": 0
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "head": "0a879ad77d242e03dc2b7042b658abc26b4d3f05",
+      "branch": "main",
+      "changedPaths": 0
+    },
+    {
+      "repository": "Stellar-Enclosure-Parent",
+      "head": "c2a3bffe21a53ccec46741943a409fad6f921e63",
+      "branch": "main",
+      "changedPaths": 5
+    },
+    {
+      "repository": "portal",
+      "head": "f82568ac730c57cc2e7b7f23e8b312a30429a602",
+      "branch": "main",
+      "changedPaths": 17
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "head": "b2e80d31a8c559e5b6e8ad98d6599bb198e9643c",
+      "branch": "main",
+      "changedPaths": 363
+    },
+    {
+      "repository": "tianquan-jianshen-web",
+      "head": "763b54b20b8949392175c4e7c005fa437797c954",
+      "branch": "main",
+      "changedPaths": 83
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "head": "49122f8f94a39e43763f165885171f0d3729a480",
+      "branch": "main",
+      "changedPaths": 263
+    },
+    {
+      "repository": "tianquan-shoubing-web",
+      "head": "ebb7244a30d5e739358fa433d8ce5502aff9f0cc",
+      "branch": "main",
+      "changedPaths": 35
+    },
+    {
+      "repository": "tianshu-service",
+      "head": "a7d04077c6cffd6aa611e071214470dc1b66df61",
+      "branch": "main",
+      "changedPaths": 271
+    },
+    {
+      "repository": "tianshu-web",
+      "head": "bf5ca46d6e60a9bb69cd6dbe4fe4c105087175aa",
+      "branch": "main",
+      "changedPaths": 80
+    },
+    {
+      "repository": "web-sdk",
+      "head": "d4073172682e56f176cdc5b36843d0ecb52b36d4",
+      "branch": "main",
+      "changedPaths": 50
+    },
+    {
+      "repository": "yaoguang-service",
+      "head": "5a99609a986851eab05200072910d387dfafe218",
+      "branch": "main",
+      "changedPaths": 62
+    },
+    {
+      "repository": "yaoguang-web",
+      "head": "e831a74b9c50fbe9df45c4550ddf0cde52b289aa",
+      "branch": "main",
+      "changedPaths": 33
+    },
+    {
+      "repository": "yuheng-service",
+      "head": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "branch": "main",
+      "changedPaths": 254
+    },
+    {
+      "repository": "yuheng-web",
+      "head": "ce4ff9c64420466f3f4d5276f6e25b813e294044",
+      "branch": "main",
+      "changedPaths": 61
+    }
+  ],
+  "changedRepositories": [
+    "Stellar-Enclosure-Parent",
+    "portal",
+    "tianquan-jianshen-service",
+    "tianquan-jianshen-web",
+    "tianquan-shoubing-service",
+    "tianquan-shoubing-web",
+    "tianshu-service",
+    "tianshu-web",
+    "web-sdk",
+    "yaoguang-service",
+    "yaoguang-web",
+    "yuheng-service",
+    "yuheng-web"
+  ],
+  "headChanges": [],
+  "whitespaceErrors": [],
+  "committedOrPushed": false
+}

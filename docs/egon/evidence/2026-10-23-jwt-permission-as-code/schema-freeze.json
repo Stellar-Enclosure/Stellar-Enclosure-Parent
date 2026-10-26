@@ -1,0 +1,25 @@
+[
+  {
+    "owner": "idp",
+    "catalogue": "idp-schema-freeze.md",
+    "catalogueSha256": "5fc6d4deffe279e7ff5edbcec38c7ec4f26f6092d440748cee14f22a1f46ebf6",
+    "reviewedDraftSha256": "fc8413cf5f2a435d34e618c7c7a1d27b688d2e7416e2b7e8bfc3fb934fc93fba"
+  },
+  {
+    "owner": "edge",
+    "catalogue": "edge-schema-freeze.md",
+    "catalogueSha256": "c9fc6851b8551edc66d4956dc110ad79f9012823e66811b430f56272772d21a2",
+    "reviewedDraftSha256": "82b670ef796861c94834b7cea20e9a58c011207103c7f75ccfa0231c1879ea07"
+  },
+  {
+    "owner": "meta",
+    "catalogue": "meta-schema-freeze.md",
+    "catalogueSha256": "2ebefc4270967c2ab093dddf503b0d790330f1ef9ff5d8be4bc1c41bad03b820",
+    "reviewedDraftSha256": "5772a82da5f28e3e2a188737fce57aa4d8ade2c9c8a53f205fad6dde6690280a"
+  },
+  {
+    "owner": "rbac",
+    "catalogue": "rbac-schema-freeze.md",
+    "catalogueSha256": "7c75d34674affaebaa56579e41a8f8c66f308ef90eaf5e45ab7d727701eeffb0"
+  }
+]

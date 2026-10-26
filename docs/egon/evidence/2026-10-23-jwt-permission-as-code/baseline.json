@@ -1,0 +1,678 @@
+{
+  "repositories": [
+    {
+      "repository": ".github",
+      "head": "c460fe220625077f53e7e1f704a668ed0de8c0d5",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "head": "8fea01fea1f913cf921a7b4cc3393a55b0c525b9",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "head": "0a879ad77d242e03dc2b7042b658abc26b4d3f05",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "Stellar-Enclosure-Parent",
+      "head": "c2a3bffe21a53ccec46741943a409fad6f921e63",
+      "branch": "main",
+      "status": "?? docs/egon/\n"
+    },
+    {
+      "repository": "portal",
+      "head": "f82568ac730c57cc2e7b7f23e8b312a30429a602",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "head": "b2e80d31a8c559e5b6e8ad98d6599bb198e9643c",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianquan-jianshen-web",
+      "head": "763b54b20b8949392175c4e7c005fa437797c954",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "head": "49122f8f94a39e43763f165885171f0d3729a480",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianquan-shoubing-web",
+      "head": "ebb7244a30d5e739358fa433d8ce5502aff9f0cc",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianshu-service",
+      "head": "a7d04077c6cffd6aa611e071214470dc1b66df61",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "tianshu-web",
+      "head": "bf5ca46d6e60a9bb69cd6dbe4fe4c105087175aa",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "web-sdk",
+      "head": "d4073172682e56f176cdc5b36843d0ecb52b36d4",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "yaoguang-service",
+      "head": "5a99609a986851eab05200072910d387dfafe218",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "yaoguang-web",
+      "head": "e831a74b9c50fbe9df45c4550ddf0cde52b289aa",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "yuheng-service",
+      "head": "7380a4880e2dbf37f4eeca498da3d97ca8bd9166",
+      "branch": "main",
+      "status": ""
+    },
+    {
+      "repository": "yuheng-web",
+      "head": "ce4ff9c64420466f3f4d5276f6e25b813e294044",
+      "branch": "main",
+      "status": ""
+    }
+  ],
+  "existingMigrations": [
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-agent/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/V20260910_001__create_knowledge_schema.sql",
+      "sha256": "7e59a11d910d53b230facc1d6c8e81f0f204adc61ffa7711376e02d0bc1b1e02"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-agent/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/V20260910_002__create_transactional_outbox_schema.sql",
+      "sha256": "75ee972cea7d7679e49459c4234f1a9b96e2929396be55e16762be702c787e2a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-agent/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/V20260913_001__egon_model_repository.sql",
+      "sha256": "ae5fb7ca9501d47aa3581c4733f837f9d31e801693af4cfae1243ffb920199c3"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "a8fc26ddac10d3ce28eb1f53135f9824e6669b7e185822a89409af53786bb14b"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/egon-mp/V20261015_001__scope_user_uniqueness_to_tenant.sql",
+      "sha256": "aab43effa801dcab60056b6a88a76416823da4a4031c40df1c8c2df6fe85870e"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/master-data/B20260825_001__baseline_light_master_data_schema.sql",
+      "sha256": "81fd45f6dbb7a692509ab24a9b786ec301b2a9fdb39ded64503c59aa98b8ff32"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_light_master_data_schema.sql",
+      "sha256": "d23daa4271dc4bcddd2f6c76bad265527e05310632bff1b45527ad073bd7bdcf"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/master-data/V20260825_001__migrate_light_master_data_to_egon_model.sql",
+      "sha256": "562d5f570030d9e52c0dc9c34f0ad34c48f984c1de7423b4121e460946358d6f"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/shard/B20260825_002__baseline_light_sharded_schema.sql",
+      "sha256": "4a84170345e2d65182341ff27a04faad00531bfd300752cfb6baf22fb4ace1f3"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/shard/V20260726_002__init_light_sharded_schema.sql",
+      "sha256": "a745bc196029f89776f4d848513f949ef698a922824afd4545bfc797b4e82abc"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light/archetype-resources/src/main/resources/db/migration/sharding/shard/V20260825_002__migrate_light_sharded_to_tenant_model.sql",
+      "sha256": "acef90ce471db93106543fa15fdf2e695a7753985d5340196a7a794cfce581b4"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/archetype-resources/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "9d9e037b94888442af46ffff71bf1cadb29743db6b57ed88a27bb9bad32c3c69"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/archetype-resources/src/main/resources/db/manual/postgresql/master-data/001__create_light_master_data_schema.sql",
+      "sha256": "5b3ff57728cb57589caed1006d12f9f0558261599990a9216cd801c22e8a9bea"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/archetype-resources/src/main/resources/db/manual/postgresql/master-data/003__migrate_light_master_data_to_egon_model.sql",
+      "sha256": "9765b9df72563ddc4717f50d3063a8bc0ba3c3a1d9c4a8947d0ccdd62e847e82"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/archetype-resources/src/main/resources/db/manual/postgresql/shard/002__create_light_sharded_schema.sql",
+      "sha256": "96b06aec503748457f31f35b038cd828af16874935f8744806aa61be52674a3d"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-light-open/archetype-resources/src/main/resources/db/manual/postgresql/shard/004__migrate_light_sharded_to_tenant_model.sql",
+      "sha256": "f6113bf70ef76d0a79455caad197a0074185b59b208750670b01147c64969d8c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "e7b138a2c8d7aa8dc91f76a4369dbdf38099bc6242012958e7fd7582f3c0e78e"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/B20260825_001__baseline_evaluation_master_data_schema.sql",
+      "sha256": "e227cc34d72cff41a1bab39343fe5a3f2ad39fdc44f78ac1b340c898295fa831"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_evaluation_master_data_schema.sql",
+      "sha256": "7ce2cb95d2dcc84a732098c4f3d92da09cd5ffaeb6fbf7c8ba06dcb850466d7a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260825_001__migrate_evaluation_master_data_to_egon_model.sql",
+      "sha256": "c1b6a5585b54a7299703db4b555e2c5a14ee28a2927b0e3ce976d72c6321bcd3"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/B20260825_002__baseline_evaluation_sharded_schema.sql",
+      "sha256": "4cf45a9db4beff0c7d3ea8ec75ca1f22d6099f1b15f92068ce786c1123b4ee82"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/V20260726_002__init_evaluation_sharded_schema.sql",
+      "sha256": "789192e9448769cb047b8ba53a49bd2ad814113069f9f58dd0a4c8fa67f6c1d6"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/V20260825_002__migrate_evaluation_sharded_to_tenant_model.sql",
+      "sha256": "64cabfbbfd845ec9a6770c3aecd5e37ee9e7e1b94bf8ab8aba526592258e6d74"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "6fae4a04ac589b23e8cd2440e8a90a1f56baa39678ac236b69305c1a7f592ba0"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/master-data/001__create_evaluation_master_data_schema.sql",
+      "sha256": "a153c8bbc4753c9bc228ec7032112092bbb0cb367ba8fbd5cfdcb830d419bbb6"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/master-data/003__migrate_evaluation_master_data_to_egon_model.sql",
+      "sha256": "d8c1f44d5c235aca94976203b2937c978f0a751dde474626c695f65b0a4f3468"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/shard/002__create_evaluation_sharded_schema.sql",
+      "sha256": "ca6abbcf549b22bf6fcec8d83bae9f6431bdb4b939be70c1ad88370abba69446"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-service-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/shard/004__migrate_evaluation_sharded_to_tenant_model.sql",
+      "sha256": "23573b3c5c5152875e9fc3bf20024e558084fce4305ea26d85ad8b7ea85ddd0c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "5a0e41b4a6202a046c507fd607af768150233c05b2468d248e538d4abe33467a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/B20260825_003__baseline_organization_master_data_schema.sql",
+      "sha256": "0e922d927cf3b00be35872cbad0683c5923ad9de0d052a9d65d6ed388d0fc95c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_organization_master_data_schema.sql",
+      "sha256": "9fe254f95400d4c6ed1bd8b720c6f0576730418dd3cec5d42a981072f3886df2"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260825_003__migrate_organization_master_data_to_egon_model.sql",
+      "sha256": "38791f226c0cfcd99dd873f1536eb12765dcc720a81e9451ec4894101ea03cb4"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/B20260825_004__baseline_organization_sharded_schema.sql",
+      "sha256": "ef3d4199b10dfcedef1befbf70af56c238a9c61585cb6a7b25190e7d0bdc81b5"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/V20260726_002__init_organization_sharded_schema.sql",
+      "sha256": "628565645e1db2ab155320df0ca6d26fdb25c2ca94123f51439bd06abba3b756"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/migration/sharding/shard/V20260825_004__migrate_organization_sharded_to_tenant_model.sql",
+      "sha256": "a80579953e72c9660bda45ba47f50436a1fa5830c255d22cb7f587e101b7dd0f"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "5bc96e9fb659a73392fdd1a81dd88080bc6d6e0e3553d163d1008297fa65633b"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/master-data/001__create_organization_master_data_schema.sql",
+      "sha256": "3b6458766ca075e886b080b4a09a4ce28f9201b90fad715463f5c6b188eee71a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/master-data/003__migrate_organization_master_data_to_egon_model.sql",
+      "sha256": "fd74f2d7016cc01bfd6acf4761bded879c7d7ed3def1574f8b84a6dfae44607b"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/shard/002__create_organization_sharded_schema.sql",
+      "sha256": "41fb899f1aedc182c5d8dcb2db564b5ba2406924ae69a23428e2dbdbf2265660"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/.generated/stellar-enclosure-archetype-web-open/archetype-resources/__rootArtifactId__-infrastructure/src/main/resources/db/manual/postgresql/shard/004__migrate_organization_sharded_to_tenant_model.sql",
+      "sha256": "7f109a8ae1b72fd86ded1badc31f296a05a747802b62f8195a9ce76dc391cc77"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-infrastructure/src/main/resources/db/migration/V20260910_001__create_knowledge_schema.sql",
+      "sha256": "7e59a11d910d53b230facc1d6c8e81f0f204adc61ffa7711376e02d0bc1b1e02"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-infrastructure/src/main/resources/db/migration/V20260910_002__create_transactional_outbox_schema.sql",
+      "sha256": "75ee972cea7d7679e49459c4234f1a9b96e2929396be55e16762be702c787e2a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-infrastructure/src/main/resources/db/migration/V20260913_001__egon_model_repository.sql",
+      "sha256": "50300d4468224c134a9ee9e82575dce6b782ab72cb7818714042442532df43d7"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "0c9f9cef139e3d6e48564e9aa27e652cac6a4991dc5daede615f5d0066ab6e81"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/egon-mp/V20261015_001__scope_user_uniqueness_to_tenant.sql",
+      "sha256": "2ab9038e44fc04d4752b532b5e4b419f8426b0d271bd72328ac0f4a866aa8da8"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/master-data/B20260825_001__baseline_light_master_data_schema.sql",
+      "sha256": "81fd45f6dbb7a692509ab24a9b786ec301b2a9fdb39ded64503c59aa98b8ff32"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_light_master_data_schema.sql",
+      "sha256": "d23daa4271dc4bcddd2f6c76bad265527e05310632bff1b45527ad073bd7bdcf"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/master-data/V20260825_001__migrate_light_master_data_to_egon_model.sql",
+      "sha256": "562d5f570030d9e52c0dc9c34f0ad34c48f984c1de7423b4121e460946358d6f"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/shard/B20260825_002__baseline_light_sharded_schema.sql",
+      "sha256": "4a84170345e2d65182341ff27a04faad00531bfd300752cfb6baf22fb4ace1f3"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/shard/V20260726_002__init_light_sharded_schema.sql",
+      "sha256": "a745bc196029f89776f4d848513f949ef698a922824afd4545bfc797b4e82abc"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light/src/main/resources/db/migration/sharding/shard/V20260825_002__migrate_light_sharded_to_tenant_model.sql",
+      "sha256": "acef90ce471db93106543fa15fdf2e695a7753985d5340196a7a794cfce581b4"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light-open/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "d0772bfe66489663b69ba27ae0c7c1f5c6c55a6d950ac72518a8ed19617716ce"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light-open/src/main/resources/db/manual/postgresql/master-data/001__create_light_master_data_schema.sql",
+      "sha256": "5b3ff57728cb57589caed1006d12f9f0558261599990a9216cd801c22e8a9bea"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light-open/src/main/resources/db/manual/postgresql/master-data/003__migrate_light_master_data_to_egon_model.sql",
+      "sha256": "9765b9df72563ddc4717f50d3063a8bc0ba3c3a1d9c4a8947d0ccdd62e847e82"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light-open/src/main/resources/db/manual/postgresql/shard/002__create_light_sharded_schema.sql",
+      "sha256": "96b06aec503748457f31f35b038cd828af16874935f8744806aa61be52674a3d"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-light-open/src/main/resources/db/manual/postgresql/shard/004__migrate_light_sharded_to_tenant_model.sql",
+      "sha256": "f6113bf70ef76d0a79455caad197a0074185b59b208750670b01147c64969d8c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "32f803020edbc886bfe24e277b6c4e551d4749a734f8441deb9d84f08fac53a5"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/master-data/B20260825_001__baseline_evaluation_master_data_schema.sql",
+      "sha256": "e227cc34d72cff41a1bab39343fe5a3f2ad39fdc44f78ac1b340c898295fa831"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_evaluation_master_data_schema.sql",
+      "sha256": "7ce2cb95d2dcc84a732098c4f3d92da09cd5ffaeb6fbf7c8ba06dcb850466d7a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260825_001__migrate_evaluation_master_data_to_egon_model.sql",
+      "sha256": "c1b6a5585b54a7299703db4b555e2c5a14ee28a2927b0e3ce976d72c6321bcd3"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/shard/B20260825_002__baseline_evaluation_sharded_schema.sql",
+      "sha256": "4cf45a9db4beff0c7d3ea8ec75ca1f22d6099f1b15f92068ce786c1123b4ee82"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/shard/V20260726_002__init_evaluation_sharded_schema.sql",
+      "sha256": "789192e9448769cb047b8ba53a49bd2ad814113069f9f58dd0a4c8fa67f6c1d6"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-infrastructure/src/main/resources/db/migration/sharding/shard/V20260825_002__migrate_evaluation_sharded_to_tenant_model.sql",
+      "sha256": "64cabfbbfd845ec9a6770c3aecd5e37ee9e7e1b94bf8ab8aba526592258e6d74"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "b659940cad509e68edd73fd25fea115a38a10d9f139d77dbcf28ab5bb93e6bb0"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-infrastructure/src/main/resources/db/manual/postgresql/master-data/001__create_evaluation_master_data_schema.sql",
+      "sha256": "a153c8bbc4753c9bc228ec7032112092bbb0cb367ba8fbd5cfdcb830d419bbb6"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-infrastructure/src/main/resources/db/manual/postgresql/master-data/003__migrate_evaluation_master_data_to_egon_model.sql",
+      "sha256": "d8c1f44d5c235aca94976203b2937c978f0a751dde474626c695f65b0a4f3468"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-infrastructure/src/main/resources/db/manual/postgresql/shard/002__create_evaluation_sharded_schema.sql",
+      "sha256": "ca6abbcf549b22bf6fcec8d83bae9f6431bdb4b939be70c1ad88370abba69446"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-infrastructure/src/main/resources/db/manual/postgresql/shard/004__migrate_evaluation_sharded_to_tenant_model.sql",
+      "sha256": "23573b3c5c5152875e9fc3bf20024e558084fce4305ea26d85ad8b7ea85ddd0c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "39b04ed66a7263e579b2e27b1e664228826dc67b69705141e853ebba20addf78"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/master-data/B20260825_003__baseline_organization_master_data_schema.sql",
+      "sha256": "0e922d927cf3b00be35872cbad0683c5923ad9de0d052a9d65d6ed388d0fc95c"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260726_001__init_organization_master_data_schema.sql",
+      "sha256": "9fe254f95400d4c6ed1bd8b720c6f0576730418dd3cec5d42a981072f3886df2"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/master-data/V20260825_003__migrate_organization_master_data_to_egon_model.sql",
+      "sha256": "38791f226c0cfcd99dd873f1536eb12765dcc720a81e9451ec4894101ea03cb4"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/shard/B20260825_004__baseline_organization_sharded_schema.sql",
+      "sha256": "ef3d4199b10dfcedef1befbf70af56c238a9c61585cb6a7b25190e7d0bdc81b5"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/shard/V20260726_002__init_organization_sharded_schema.sql",
+      "sha256": "628565645e1db2ab155320df0ca6d26fdb25c2ca94123f51439bd06abba3b756"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-infrastructure/src/main/resources/db/migration/sharding/shard/V20260825_004__migrate_organization_sharded_to_tenant_model.sql",
+      "sha256": "a80579953e72c9660bda45ba47f50436a1fa5830c255d22cb7f587e101b7dd0f"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-infrastructure/src/main/resources/db/egon-mp/V20260913_001__initialize_repository_schema.sql",
+      "sha256": "74e35ae68c50898a0cd8ec250e775f03eb2a76f3b302cff687eaca59401fc22f"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-infrastructure/src/main/resources/db/manual/postgresql/master-data/001__create_organization_master_data_schema.sql",
+      "sha256": "3b6458766ca075e886b080b4a09a4ce28f9201b90fad715463f5c6b188eee71a"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-infrastructure/src/main/resources/db/manual/postgresql/master-data/003__migrate_organization_master_data_to_egon_model.sql",
+      "sha256": "fd74f2d7016cc01bfd6acf4761bded879c7d7ed3def1574f8b84a6dfae44607b"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-infrastructure/src/main/resources/db/manual/postgresql/shard/002__create_organization_sharded_schema.sql",
+      "sha256": "41fb899f1aedc182c5d8dcb2db564b5ba2406924ae69a23428e2dbdbf2265660"
+    },
+    {
+      "path": "Stellar-Enclosure-COLA/source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-infrastructure/src/main/resources/db/manual/postgresql/shard/004__migrate_organization_sharded_to_tenant_model.sql",
+      "sha256": "7f109a8ae1b72fd86ded1badc31f296a05a747802b62f8195a9ce76dc391cc77"
+    },
+    {
+      "path": "Stellar-Enclosure-Components/stellar-enclosure-component-common/stellar-enclosure-component-common-mybatis-plus-sharding-jdbc-ext-spring-boot-starter/src/main/resources/db/egon-ddl/V20261018_001__initialize_managed_ddl_history.sql",
+      "sha256": "917a536881759702efe51dec1c36dc282e3977df6171ce2721ac76ef20bab719"
+    },
+    {
+      "path": "Stellar-Enclosure-Components/stellar-enclosure-component-transactional-outbox-starter/src/main/resources/db/egon-outbox-mp/V20260924_001__initialize_outbox_mp_schema.sql",
+      "sha256": "2bae1d8a90cdc7bd5a2c0889ff73625593de2d5b5261f60e23c3b8d76e708902"
+    },
+    {
+      "path": "Stellar-Enclosure-Components/stellar-enclosure-component-transactional-outbox-starter/src/main/resources/db/transactional-outbox/postgresql/V1__create_transactional_outbox_schema.sql",
+      "sha256": "611d47e890618364c6c89d2967c4159ba5bde02756c52165799a6d6a0ca6b7f8"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/B14__create_current_rbac3_schema.sql",
+      "sha256": "03e05a9b91009572c3e2e35a0e4be7716d4724e453bcc359f7dca754e68019ad"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V10__seed_builtin_roles_and_permissions.sql",
+      "sha256": "3e46df9f00964aa81dba72b5c3cd126fe01decd481ac6a8a266b79436cead8a2"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V11__seed_builtin_user_business_access.sql",
+      "sha256": "c2b0b2c08887c0017b110fc162717977b0f0d98c2621c75fadb4e7f58cae9cba"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V12__seed_rbac3_about_permission.sql",
+      "sha256": "955960be65c58d09a293da971ec8bfd34fd27830c044907738ad694432476959"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V13__replace_role_permissions_and_add_resource_api_bindings.sql",
+      "sha256": "cae70a10e091674226cc8a25717aefdff6290cfa0ffd7a0d9e3f09e002122e40"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V15__encapsulate_skip_locked_worker_claims.sql",
+      "sha256": "64aa0c8933d7af5c0f2803042177d2c00e167ee185307722b464db9eae569f1a"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V1__create_rbac3_schema.sql",
+      "sha256": "f49f460261ff4a932b193895d83085bb2a9e73df82ab4b6624eff6fa9ec53445"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V2__add_session_strong_authentication_time.sql",
+      "sha256": "14f95b4928e88f5101f7a6b68f4b6e593cc6c9e0cbee88f52a01a1af2b8ef184"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V3__adopt_idp_identity.sql",
+      "sha256": "e1044531967a2b0a016c23af83e568f8ae2a1aebc9384db8efbd90c94b06bd1c"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V4__scope_session_identity_by_tenant.sql",
+      "sha256": "f0080a25217d666b5c8018ee0d604f4965de0515f0e7e5a4b862df09d92d19ae"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V5__remove_sessions_and_minimize_authorization_user.sql",
+      "sha256": "f6ae0ad90d6b715a0ef78d292894b5420f35cd58a147fd56aa20e270d241bb11"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V6__adopt_ddc_business_application_authorization_scope.sql",
+      "sha256": "c87a98ccc400165f4c2ebb63113fb740cee913d4aab0ffcc3fdd1d25b7f2e578"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V7__globalize_resource_catalog_and_remove_manifest.sql",
+      "sha256": "e33c4b5128a049aa5377996ec5e38e34a25b358a7579e34858817faa259bbf1f"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V8__externalize_tenant_authority.sql",
+      "sha256": "dd93477e821fb4cf90aabc4b52150bfb667b9bb9d55bb3570b9ecda193d6b113"
+    },
+    {
+      "path": "tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-admin/src/main/resources/db/migration/V9__restore_application_code_compatibility.sql",
+      "sha256": "489acc51bde9b90d93636229548313397b9cae40306d6947c4b4e7ee5f069ece"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/egon-mp/V20261008_001__initialize_oauth_tenant_schema.sql",
+      "sha256": "238adf24fc3025f27ac5da91528b6110962977762f3ce751467a970a7c6acc23"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/egon-mp/V20261009_001__support_oauth_consent_state.sql",
+      "sha256": "89210d641e6018b5c1e87a394bbe9d99eb90f64a7f86217ce2ec40a90afad5db"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V1__create_idp_schema.sql",
+      "sha256": "a2cad124faaf660b17e4079d97f69f0aab492e23285ce1ca74549c9c9b604f6c"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V2__add_oauth_resource_servers.sql",
+      "sha256": "d4ed13713b20748f18729e7f27cafc800c1567f8bf5ebfaf06ed01c94d592c13"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V3__create_transactional_outbox_schema.sql",
+      "sha256": "e9b7db01d4ddbad8c7c503815b53f8287b2c0faca90dd026394999156bb52e2a"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V4__remove_user_token_version.sql",
+      "sha256": "888d5022a85dc5343b3513c4eac76067116ac4df6207d7e406497867115c8d80"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V5__adopt_client_secrets_and_tenant_authority.sql",
+      "sha256": "057ca58ae34f8b55f9a0e62b148ff88be4b12d312590c5d90886c593bb1593ef"
+    },
+    {
+      "path": "tianquan-shoubing-service/stellar-enclosure-tianquan-shoubing-admin/src/main/resources/db/migration/V6__backfill_confidential_client_app_ids.sql",
+      "sha256": "707aa4516777f2396e069125f60cb509d31ba89b2b01121dc5baf4e0c8ee3f06"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/egon-mp/V20260922_001__tianshu_platform.sql",
+      "sha256": "c2fdefad7c3ed1244757f9b6e4d78df82ad51d9e4870e9e47eda5f57e9370678"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/egon-mp/V20260928_001__tianshu_instance_business_key.sql",
+      "sha256": "3700ddc8c7653c275cd0dd8d53ff6d7ae449d99f95da13e2ca34b52da80a1a9b"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/egon-mp/V20261017_001__tianshu_ai_feedback_optimization.sql",
+      "sha256": "ea388ac5115c1e6e35604cf52da16599c17e8be43fbe41d0e8cddb3d3a2ecac6"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/egon-mp/V20261018_001__tianshu_fresh_baseline_and_constraints.sql",
+      "sha256": "acdf95ef39c35ce673558b6027b4641bbc7f0cad674e7e902c7c695f81b3a6b1"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/egon-mp/V20261022_001__tianshu_page_i18n.sql",
+      "sha256": "7fa986be12478e6c5df90ad17328409b969616f5f9ff5d7897a858d4ba3421c9"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V1__create_ddc_schema.sql",
+      "sha256": "fb4363236774caf9b61d04d4f99072cca9eeee84a57a946269eb79345186fdec"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V2__add_lease_and_sync_publish.sql",
+      "sha256": "979b11f97306b54a1b4b7e6fb20b390f468e1ae9b6ae043c5cee786db5ac335d"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V3__add_instance_runtime_metadata.sql",
+      "sha256": "93f21b47822f78e2271a5746cdafbd71557360d401ba1017034b501a39b73e8f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V4__add_published_config_pointer.sql",
+      "sha256": "bba1d16d0a95dbfb13a0a235eca3a238167b5100f71010f638d82cbc7f8c4deb"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V5__add_biz_env_and_detach_namespace_env.sql",
+      "sha256": "e1a15b8db7f281329f6a4369c8e8eeaa024bb100a5ada5fda50de7b97e157d75"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V6__add_namespace_code.sql",
+      "sha256": "eaca99b4047aaee02d8ef96c63fc1aecd4fe5e86097452c129e9b00763b9ade8"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V7__add_namespace_env_app_visibility.sql",
+      "sha256": "b291e74e373d6742f550f9516c9510f99ca022e09fd8a8e7eac3df20975185c9"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V8__add_resource_admission_audit.sql",
+      "sha256": "2403954eff1814df65269735511fb2e611c9c113f1dc32917b7491b54c06f28f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/postgresql/V9__enforce_global_biz_app_codes.sql",
+      "sha256": "4201410e91f7886c36a3f2de209bcbdff22222695ace0fc0203661fdf16a654c"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V1__create_ddc_schema.sql",
+      "sha256": "69a1b6d8096da10a6ce9c1ac7e567fa3d449481debce85fd30ca4869e866205d"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V2__add_lease_and_sync_publish.sql",
+      "sha256": "a68dfc7925ecdca9aff590e3d859066f6d80eefa726f9120a07a90e583c15894"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V3__add_instance_runtime_metadata.sql",
+      "sha256": "93f21b47822f78e2271a5746cdafbd71557360d401ba1017034b501a39b73e8f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V4__add_published_config_pointer.sql",
+      "sha256": "9a27ad7038678660728d11c92b91a0e6df5372b7e2855ea3198934256644374f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V5__add_biz_env_and_detach_namespace_env.sql",
+      "sha256": "b85ead9469677bdff9a7f0e8506b2930fa65ec20a25ddbbfb7cc047c6d1c3ddf"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V6__add_namespace_code.sql",
+      "sha256": "e1ecbcfb28c6490306128c0e0f45f1a4721ab01dff921b270cd06bfccce8b01f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V7__add_namespace_env_app_visibility.sql",
+      "sha256": "035133c0985082e9df15d8fa2a59e5e3cf394268d4491093139b91514d535ab9"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V8__add_resource_admission_audit.sql",
+      "sha256": "2403954eff1814df65269735511fb2e611c9c113f1dc32917b7491b54c06f28f"
+    },
+    {
+      "path": "tianshu-service/stellar-enclosure-tianshu-admin/src/main/resources/db/sqlite/V9__enforce_global_biz_app_codes.sql",
+      "sha256": "4201410e91f7886c36a3f2de209bcbdff22222695ace0fc0203661fdf16a654c"
+    },
+    {
+      "path": "yaoguang-service/stellar-enclosure-yaoguang-admin/src/main/resources/db/egon-mp/20261020_001_yaoguang_schema.sql",
+      "sha256": "05940539c93447f6ff795cc59cf8a8b30440c80fac63d97850408a3176eb8b25"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/egon-mp/20260922_001_yuheng_schema.sql",
+      "sha256": "22dc8ec627ee6e0eaabb1c8ecad55f80798a5d061abcc96a964966bf74de493e"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V10__project_annotation_managed_mcp_tools.sql",
+      "sha256": "f016eb79820c5b4e0f42b2a03e3a8bf43a3f99afc36a19a6a7c6e2d1b89d82bc"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V11__rename_mcp_oauth_resource.sql",
+      "sha256": "29d10aa02db7b0807ad8972f00cff4dc16cee839793c7408ed195eff18d8fcab"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V12__add_gateway_openapi_sync.sql",
+      "sha256": "3ee0e4269d8c1091be1970f97f66118996065b0207941006c9f72dc6e89dd51e"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V13__freeze_gateway_engine_publication_targets.sql",
+      "sha256": "1f1e1fa3a9a23db4b9d043403fea4d5a0c522d02540f9c2732ca36f645975561"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V1__create_gateway_admin_schema.sql",
+      "sha256": "0779a74da97e0f5277a524610593f64b5fbfb8e8e749d61dd3961ebcff394900"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V2__add_gateway_observability_projection.sql",
+      "sha256": "4f622f502b2bd23fde407cc1c0b30e9143b58a25276e215d651a76dc907623a2"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V3__add_definition_lifecycle_membership.sql",
+      "sha256": "bf43c8fd7f8c720cc41ecfb5df6cd24491c5af0ee0a306960dad50bf81ca8f02"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V4__add_release_publication_journal.sql",
+      "sha256": "89ce0e6d35412ad4d62265a4a118e8cfff60eb24de21c757fe42fbc334e66a37"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V5__add_gateway_application_biz_scope.sql",
+      "sha256": "af045c05c310628f6236dfa0baea7823825c7b4e3b5559b8d0611aaf3e53e5fc"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V6__enforce_gateway_application_physical_identity.sql",
+      "sha256": "3e261158d9feb647ff7ac943092136a274c89da225828caf7d493a98e4aeac1f"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V7__add_gateway_mcp_control_plane.sql",
+      "sha256": "7ad0da98a269fc53666dd6444a19c7efe220e673e8c6200a0a8154c13abb4e3f"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V8__expand_gateway_mcp_resource_drivers.sql",
+      "sha256": "bbf95dc41d66b1d7d6796adb6eec122d5292985acc4b949b698beb46acf219e9"
+    },
+    {
+      "path": "yuheng-service/stellar-enclosure-yuheng-admin/src/main/resources/db/migration/V9__expand_gateway_mcp_prompt_sources.sql",
+      "sha256": "486db32ccf738d3aa5332d9a4553c88c90f20a78caa6622520f26c875514bb36"
+    }
+  ]
+}
