@@ -1,0 +1,651 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-26T21:45:01+08:00",
+  "scope": {
+    "workspace": "/Users/mario/SelfProject/Stellar-Enclosure",
+    "repositories": 15,
+    "intent": "修复现有单测、夹具和测试配置；实现不满足需求的情况集中待用户确认，避免阻塞构建。",
+    "productionSourceModified": false,
+    "dependenciesChanged": false,
+    "existingFlywayMigrationsModified": false
+  },
+  "environment": {
+    "javaMajor": 25,
+    "mavenWrapper": "3.9.14",
+    "nodeMajor": 24,
+    "timeZone": "Asia/Shanghai",
+    "mavenLocalRepository": "/tmp/stellar-java25-boot4/m2"
+  },
+  "summary": {
+    "java": {
+      "tests": 6224,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 55,
+      "executed": 6169,
+      "passed": 6169
+    },
+    "pendingConfirmationSkipped": 2,
+    "existingConditionalOrEnvironmentSkipped": 53,
+    "vitestPassed": 718,
+    "nodeContractPassed": 140,
+    "pythonPassed": 187,
+    "frontendTypechecksPassed": 7,
+    "frontendBuildsPassed": 7,
+    "unhandledFailures": 0
+  },
+  "compile": {
+    "mavenReactorModules": 132,
+    "status": "passed",
+    "log": "/tmp/stellar-unit-audit-20261026/backend-testcompile-final.log",
+    "sha256": "6dcbb4d5b249422538d6eb22bb9e581d05021e382add3a68e00558e8ed7a83b9"
+  },
+  "repositories": [
+    {
+      "repository": "Stellar-Enclosure-Parent",
+      "baseCommit": "eb2519dda577b9764df5e3b7558ddf39d91fb344",
+      "changedTrackedFiles": [],
+      "java": {
+        "counts": {
+          "tests": 0,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "executed": 0,
+          "passed": 0
+        },
+        "reportCount": 0,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "pythonTestsPassed": 16
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "baseCommit": "0a879ad77d242e03dc2b7042b658abc26b4d3f05",
+      "changedTrackedFiles": [
+        "stellar-enclosure-component-agent-flow-starter/src/test/java/top/egon/cola/component/agentflow/contract/AgentFlowComponentContractTest.java",
+        "stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-admin/src/test/java/top/egon/cola/component/dtp/admin/trigger/DynamicThreadPoolOpenApiTest.java",
+        "stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-starter/src/test/java/top/egon/cola/component/dtp/config/DtpAsyncIntegrationTest.java",
+        "stellar-enclosure-component-rag-starter/src/test/java/top/egon/cola/component/rag/reactor/RagDeliverySurfaceTest.java",
+        "stellar-enclosure-component-rpc/stellar-enclosure-component-rpc-starter/src/test/java/top/egon/cola/component/rpc/contract/ComponentContractGovernanceTest.java",
+        "stellar-enclosure-component-rpc/stellar-enclosure-component-rpc-tianshu-adapter/src/test/java/top/egon/cola/component/rpc/tianshu/contract/DdcAiStableVersionSelectorTest.java",
+        "stellar-enclosure-component-transactional-outbox-starter/src/test/java/top/egon/cola/component/outbox/contract/ComponentContractGovernanceTest.java"
+      ],
+      "java": {
+        "counts": {
+          "tests": 1707,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 51,
+          "executed": 1656,
+          "passed": 1656
+        },
+        "reportCount": 409,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/components-final2.log",
+        "sha256": "6723dabea5be331d22da20c3f9b0dfb7fc358b07a3c5fa5017285821a7f37269"
+      }
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "baseCommit": "8fea01fea1f913cf921a7b4cc3393a55b0c525b9",
+      "changedTrackedFiles": [
+        "source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-adapter/src/test/java/top/egon/cola/archetype/source/agent/adapter/NativeAgentSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-starter/src/test/java/top/egon/cola/archetype/source/agent/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-agent/stellar-enclosure-source-agent-starter/src/test/java/top/egon/cola/archetype/source/agent/starter/config/NativeSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-light-open/src/test/java/top/egon/cola/archetype/source/lightopen/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-light/src/test/java/top/egon/cola/archetype/source/light/adapter/graphql/NativeGraphQlSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-light/src/test/java/top/egon/cola/archetype/source/light/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-light/src/test/java/top/egon/cola/archetype/source/light/start/config/NativeSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-service-open/stellar-enclosure-source-service-open-starter/src/test/java/top/egon/cola/archetype/source/serviceopen/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-starter/src/test/java/top/egon/cola/archetype/source/service/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-service/stellar-enclosure-source-service-starter/src/test/java/top/egon/cola/archetype/source/service/starter/config/NativeSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-web-open/stellar-enclosure-source-web-open-starter/src/test/java/top/egon/cola/archetype/source/webopen/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-adapter/src/test/java/top/egon/cola/archetype/source/web/adapter/graphql/NativeGraphQlSecurityContractTest.java",
+        "source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-starter/src/test/java/top/egon/cola/archetype/source/web/architecture/JavaSourceContractTest.java",
+        "source-projects/stellar-enclosure-source-web/stellar-enclosure-source-web-starter/src/test/java/top/egon/cola/archetype/source/web/starter/config/NativeSecurityContractTest.java"
+      ],
+      "java": {
+        "counts": {
+          "tests": 1059,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 1,
+          "executed": 1058,
+          "passed": 1058
+        },
+        "reportCount": 327,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/cola-source-final2.log",
+        "sha256": "5a5fc56d47d387424db312ff1934fc286601079ceb0f0a88fd230d35e23e0c49"
+      },
+      "pythonTestsPassed": 117
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "baseCommit": "85c66ac47598b9dc5ef94e830dabcc61e25f395a",
+      "changedTrackedFiles": [],
+      "java": {
+        "counts": {
+          "tests": 638,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 2,
+          "executed": 636,
+          "passed": 636
+        },
+        "reportCount": 155,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianquan-jianshen-service-producer-final2.log",
+        "sha256": "c2533008944222a15beb880c00e78d527aaf3860bbf7e5ab211c96d60c55a043"
+      }
+    },
+    {
+      "repository": "tianquan-shoubing-service",
+      "baseCommit": "968dc3b687be7ee03961f5102b9d09e0c96a819c",
+      "changedTrackedFiles": [],
+      "java": {
+        "counts": {
+          "tests": 699,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "executed": 699,
+          "passed": 699
+        },
+        "reportCount": 122,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianquan-shoubing-service-producer-final2.log",
+        "sha256": "2f5292d2a88e3a39e9b5adec4b090c833ae1bde56c86e5cf7976267b3d0bb92b"
+      }
+    },
+    {
+      "repository": "tianshu-service",
+      "baseCommit": "f640f2ee89dfd1568bb4f6f0f94a6d4f12cb90b9",
+      "changedTrackedFiles": [
+        "stellar-enclosure-tianshu-test/src/test/java/top/egon/cola/component/tianshu/test/DdcSampleInjectionTest.java",
+        "stellar-enclosure-tianshu-test/src/test/java/top/egon/cola/component/tianshu/test/DdcStarterRuntimeFlowTest.java"
+      ],
+      "java": {
+        "counts": {
+          "tests": 914,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 1,
+          "executed": 913,
+          "passed": 913
+        },
+        "reportCount": 191,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianshu-service-producer-final2.log",
+        "sha256": "2a58f70307733de5cdfb092e126c81d4fce9524cbf9561f6dd6974f0d389ce2c"
+      }
+    },
+    {
+      "repository": "yuheng-service",
+      "baseCommit": "af9af4e7d8471dd29ca80ebec44c4a3b1ba56f69",
+      "changedTrackedFiles": [
+        "stellar-enclosure-yuheng-starter-openapi-webflux/src/test/java/top/egon/cola/component/yuheng/openapi/webflux/GatewayOpenApiWebFluxContractTest.java",
+        "stellar-enclosure-yuheng-starter-openapi-webflux/src/test/java/top/egon/cola/component/yuheng/openapi/webflux/GatewayOpenApiWebFluxSecurityAutoConfigurationTest.java",
+        "stellar-enclosure-yuheng-starter-openapi-webmvc/src/test/java/top/egon/cola/component/yuheng/openapi/webmvc/GatewayOpenApiWebMvcContractTest.java",
+        "stellar-enclosure-yuheng-starter-openapi-webmvc/src/test/java/top/egon/cola/component/yuheng/openapi/webmvc/GatewayOpenApiWebMvcSecurityAutoConfigurationTest.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-http-provider/src/test/java/top/egon/cola/component/yuheng/test/http/HttpProviderContractTest.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/deployment/GatewayComposeConfigurationTest.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/deployment/GatewayDemoScriptContractTest.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/deployment/GatewayTestApplicationPackagingTest.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-suite/src/test/java/top/egon/cola/component/yuheng/test/integration/XingyuanResourceAuthorizationIT.java",
+        "stellar-enclosure-yuheng-test/stellar-enclosure-yuheng-test-webflux-http-provider/src/test/java/top/egon/cola/component/yuheng/test/webflux/WebFluxHttpProviderContractTest.java"
+      ],
+      "java": {
+        "counts": {
+          "tests": 1123,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "executed": 1123,
+          "passed": 1123
+        },
+        "reportCount": 303,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/yuheng-service-producer-final3.log",
+        "sha256": "f44eee16f9de423df1428d263344e1cc60406e5220c84c57971e1251c75a6b29"
+      }
+    },
+    {
+      "repository": "yaoguang-service",
+      "baseCommit": "5d73d4d75895426240084e32cadae11acdbb59fd",
+      "changedTrackedFiles": [],
+      "java": {
+        "counts": {
+          "tests": 84,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "executed": 84,
+          "passed": 84
+        },
+        "reportCount": 14,
+        "reportPattern": "**/target/surefire-reports/TEST-*.xml"
+      },
+      "mavenVerification": {
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/yaoguang-service-producer-final.log",
+        "sha256": "eb8b73dc2b01a07838f8cc1e428977793936b31f43ff7e650e6ce14c871c2264"
+      }
+    },
+    {
+      "repository": "web-sdk",
+      "baseCommit": "36e577a5def74761b22eedd6c8388340ec00c7a8",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 115,
+        "nodePassed": 140,
+        "testLog": "/tmp/stellar-unit-audit-20261026/web-sdk-prepared-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/web-sdk-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/web-sdk-prepared-test.log"
+      }
+    },
+    {
+      "repository": "portal",
+      "baseCommit": "44af1c8c06e2a1731e1be23623054f6b0ea4c04a",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 34,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/portal-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/portal-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/portal-build.log"
+      },
+      "pythonTestsPassed": 9
+    },
+    {
+      "repository": "tianquan-jianshen-web",
+      "baseCommit": "0373c365f8748d5f6e83db7030b428ccf4da5fd5",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 80,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/tianquan-jianshen-web-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/tianquan-jianshen-web-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/tianquan-jianshen-web-build.log"
+      },
+      "pythonTestsPassed": 9
+    },
+    {
+      "repository": "tianquan-shoubing-web",
+      "baseCommit": "3b41b9527f90c12700292f740bd6aa5167cab368",
+      "changedTrackedFiles": [
+        "vite.config.ts"
+      ],
+      "frontend": {
+        "vitestPassed": 62,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/shoubing-serial-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/tianquan-shoubing-web-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/tianquan-shoubing-web-build.log"
+      },
+      "pythonTestsPassed": 9
+    },
+    {
+      "repository": "tianshu-web",
+      "baseCommit": "f9537fa506fbb46090aa1785ed273776f1dc54da",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 189,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/tianshu-web-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/tianshu-web-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/tianshu-web-build.log"
+      },
+      "pythonTestsPassed": 9
+    },
+    {
+      "repository": "yuheng-web",
+      "baseCommit": "b0ee0dbcaf01267ebad4e40d38ddf6dfe87c6b68",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 169,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/yuheng-web-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/yuheng-web-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/yuheng-web-build.log"
+      },
+      "pythonTestsPassed": 9
+    },
+    {
+      "repository": "yaoguang-web",
+      "baseCommit": "0255e8c3d2d0527bf76fa519c4c9a0d9c91e8eee",
+      "changedTrackedFiles": [],
+      "frontend": {
+        "vitestPassed": 69,
+        "nodePassed": 0,
+        "testLog": "/tmp/stellar-unit-audit-20261026/yaoguang-web-test.log",
+        "typecheck": "passed",
+        "typecheckLog": "/tmp/stellar-unit-audit-20261026/yaoguang-web-typecheck.log",
+        "build": "passed",
+        "buildLog": "/tmp/stellar-unit-audit-20261026/yaoguang-web-build.log"
+      },
+      "pythonTestsPassed": 9
+    }
+  ],
+  "deferredImplementationIssues": [
+    {
+      "id": "UNIT-AUDIT-20261026-001",
+      "status": "resolved",
+      "repository": "Stellar-Enclosure-Components",
+      "implementation": "stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-starter/src/main/java/top/egon/cola/component/dtp/config/DtpTaskContextAutoConfiguration.java",
+      "description": "@EnableAsync 场景未装配 DtpAsyncConfigurer，void 异常没有进入 DTP 异常处理器；关闭监控后的相同异常路径也未满足现有测试要求。",
+      "observedBeforeDeferral": [
+        "No AsyncConfigurer bean was registered in the actual Spring test context.",
+        "The void exception used SimpleAsyncUncaughtExceptionHandler; the DTP callback list remained empty and timed out."
+      ],
+      "decisionRequested": "是否按现有测试要求修复自动装配，并恢复这两个测试？",
+      "disposition": "保留断言，仅给这两个用例加带问题编号的 @Disabled；业务实现未改；项目未配置全局忽略测试失败。",
+      "tests": [
+        {
+          "repository": "Stellar-Enclosure-Components",
+          "test": "top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.actualSpringProxyPreservesContextAndObservesVoidFutureAndCompletableFailures",
+          "reason": "UNIT-AUDIT-20261026-001: pending confirmation of DtpAsyncConfigurer registration for @EnableAsync",
+          "report": "stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-starter/target/surefire-reports/TEST-top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.xml"
+        },
+        {
+          "repository": "Stellar-Enclosure-Components",
+          "test": "top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.disabledMonitoringStillPropagatesContextAndReportsErrors",
+          "reason": "UNIT-AUDIT-20261026-001: pending confirmation of DTP void exception handling for @EnableAsync",
+          "report": "stellar-enclosure-component-dynamic-thread-pool/stellar-enclosure-component-dynamic-thread-pool-starter/target/surefire-reports/TEST-top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.xml"
+        }
+      ],
+      "baselineLog": "/tmp/stellar-unit-audit-20261026/components-final.log",
+      "resolution": {
+        "confirmedOn": "2026-10-27",
+        "userInstruction": "修复。",
+        "completedAt": "2026-10-27T08:19:47+08:00",
+        "rootCause": "装配条件硬编码了 org.springframework.context.annotation.internalAsyncAnnotationProcessor；当前 Spring 实际注册的是 org.springframework.scheduling.config.internalAsyncAnnotationProcessor。",
+        "fix": "改用 TaskManagementConfigUtils.ASYNC_ANNOTATION_PROCESSOR_BEAN_NAME，沿用已有 AsyncConfigurer 条件回退及异常处理机制。",
+        "restoredDisabledTests": [
+          "top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.actualSpringProxyPreservesContextAndObservesVoidFutureAndCompletableFailures",
+          "top.egon.cola.component.dtp.config.DtpAsyncIntegrationTest.disabledMonitoringStillPropagatesContextAndReportsErrors"
+        ],
+        "newRegressionTests": [
+          "DtpTaskContextAutoConfigurationTest.enabledAsyncUsesDtpConfigurerWithoutChangingSpringExecutorSelection",
+          "DtpTaskContextAutoConfigurationTest.disabledComponentDoesNotContributeAnAsyncConfigurer",
+          "DtpAsyncIntegrationTest.forcedBootExecutorKeepsDtpVoidExceptionHandling"
+        ],
+        "compatibilityChecks": [
+          "普通模式保留 Spring 的执行器选择。",
+          "Boot force 模式使用 applicationTaskExecutor 并保留 DTP 异常回调。",
+          "用户自定义 AsyncConfigurer 的执行器与异常处理器在 auto、force 模式下均保留。",
+          "关闭监控仍传播上下文和报告异常；关闭组件不注册 DTP 异步配置器。"
+        ],
+        "validation": {
+          "javaMajor": 25,
+          "mavenModulesCompiled": 4,
+          "targetedTestsPassed": 12,
+          "moduleTotals": {
+            "tests": 204,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 17,
+            "passed": 187
+          },
+          "moduleResults": {
+            "stellar-enclosure-component-dynamic-thread-pool-test": {
+              "tests": 21,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 17,
+              "passed": 4
+            },
+            "stellar-enclosure-component-dynamic-thread-pool-admin": {
+              "tests": 34,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0,
+              "passed": 34
+            },
+            "stellar-enclosure-component-dynamic-thread-pool-starter": {
+              "tests": 149,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0,
+              "passed": 149
+            }
+          },
+          "command": "JAVA_HOME=<JDK25> ../Stellar-Enclosure-Parent/mvnw -B -ntp -o -DskipTests=false -DskipITs -Dmaven.repo.local=/tmp/stellar-java25-boot4/m2 -f stellar-enclosure-component-dynamic-thread-pool/pom.xml test",
+          "workingDirectory": "Stellar-Enclosure-Components",
+          "log": "/tmp/stellar-dtp-async-fix-20261027/module-tests.log",
+          "logSha256": "c028899ae1a55752ac703b9e97ab6dcfd6a359e76bcb1d78ebb0bd054aecbf9d"
+        },
+        "validationBoundary": "本轮复测 DTP 相关模块；17 个依赖真实 Redis 的用例沿用原环境门禁跳过，未启动应用做运行验收。"
+      }
+    }
+  ],
+  "otherConditionalSkips": [
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.accessguard.store.redisson.RedissonStoreIntegrationTest",
+      "reason": "System property [egon.access.guard.redis.it] does not exist",
+      "count": 5
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.dtp.test.ApiTest",
+      "reason": "Environment variable [DTP_REDIS_TESTS] does not exist",
+      "count": 1
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.dtp.test.middleware.dynamic.thread.pool.integration.ThreadPoolIntegrationTest",
+      "reason": "Environment variable [DTP_REDIS_TESTS] does not exist",
+      "count": 5
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.dtp.test.DynamicThreadPoolAdjustTest",
+      "reason": "Environment variable [DTP_REDIS_TESTS] does not exist",
+      "count": 4
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.dtp.test.middleware.dynamic.thread.pool.smoke.SmokeTest",
+      "reason": "Environment variable [DTP_REDIS_TESTS] does not exist",
+      "count": 7
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.bytecode.test.release.BytecodeReleaseShapeTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 2
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.mybatis.integration.EgonColaOptimisticLockPostgreSqlTest",
+      "reason": "Environment variable [EGON_MP_PG_MODEL_TEST] does not exist",
+      "count": 1
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.mybatis.ddl.EgonColaPostgreDdlRunnerTest",
+      "reason": "Environment variable [EGON_MP_PG_DDL_TEST] does not exist",
+      "count": 3
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.mybatis.integration.EgonColaUtcTimePostgreSqlTest",
+      "reason": "Environment variable [EGON_MP_PG_MODEL_TEST] does not exist",
+      "count": 2
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.mybatis.integration.EgonColaLogicDeletePostgreSqlTest",
+      "reason": "Environment variable [EGON_MP_PG_MODEL_TEST] does not exist",
+      "count": 1
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.cache.port.EgonColaTwoLevelCachePortEvictionIntegrationTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 7
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.cache.core.EgonColaTwoLevelCacheTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 7
+    },
+    {
+      "repository": "Stellar-Enclosure-Components",
+      "testClass": "top.egon.cola.component.common.cache.port.EgonColaCacheClusterConvergenceTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 4
+    },
+    {
+      "repository": "Stellar-Enclosure-COLA",
+      "testClass": "top.egon.cola.archetype.source.serviceopen.adapter.rpc.EvaluationDubboTripleIntegrationTest",
+      "reason": "System property [egon.test.triple.enabled] does not exist",
+      "count": 1
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "testClass": "top.egon.cola.platform.tianquan.jianshen.core.performance.CoreAlgorithmBudgetTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 1
+    },
+    {
+      "repository": "tianquan-jianshen-service",
+      "testClass": "top.egon.cola.platform.tianquan.jianshen.yuheng.performance.GatewayHotPathBudgetTest",
+      "reason": "conditional/assumption skip; see original report",
+      "count": 1
+    },
+    {
+      "repository": "tianshu-service",
+      "testClass": "top.egon.cola.component.tianshu.admin.repository.DdcPublishAckLockTest",
+      "reason": "disabledWithoutDocker is true and Docker is not available",
+      "count": 1
+    }
+  ],
+  "additionalChecks": {
+    "pythonSuites": [
+      {
+        "tests": 16,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/Stellar-Enclosure-Parent-scripts-0.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianquan-jianshen-web-scripts-4.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianquan-shoubing-web-scripts-5.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/tianshu-web-scripts-6.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/yaoguang-web-scripts-7.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/yuheng-web-scripts-8.log"
+      },
+      {
+        "tests": 9,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/portal-scripts-3.log"
+      },
+      {
+        "tests": 12,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/cola-stellar-enclosure-coding-executing-plan-unit.log"
+      },
+      {
+        "tests": 35,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/cola-stellar-enclosure-coding-writing-plan-unit.log"
+      },
+      {
+        "tests": 70,
+        "status": "passed",
+        "log": "/tmp/stellar-unit-audit-20261026/cola-stellar-enclosure-coding-writing-spec-unit.log"
+      }
+    ],
+    "colaResourceValidators": "passed",
+    "colaGeneratorSafetyTests": {
+      "status": "passed",
+      "log": "/tmp/stellar-unit-audit-20261026/cola-generator-unit.log"
+    },
+    "colaSkillLinkerTests": {
+      "status": "passed",
+      "log": "/tmp/stellar-unit-audit-20261026/cola-link-skills-unit.log"
+    },
+    "archetypeGeneration": {
+      "status": "passed",
+      "families": 7,
+      "log": "/tmp/stellar-unit-audit-20261026/cola-generate-final2.log"
+    },
+    "auditSpoolHelperTests": {
+      "status": "passed",
+      "tests": 2,
+      "note": "Only two filesystem support checks were explicitly selected from an IT class; no live integration scenario was run.",
+      "log": "/tmp/stellar-unit-audit-20261026/spool-helper-test.log"
+    },
+    "sdkContractResourcesMatchCurrentJar": true
+  },
+  "reproduction": {
+    "maven": "Use JAVA_HOME for JDK 25 and the checked-in Maven wrapper. Five service CI checks enable -Ppermission-producer and pass the repository HEAD and a local permission.buildId; run verify with -DskipITs -Dinvoker.skip=true -Darchetype.test.skip=true.",
+    "frontendEnvironment": {
+      "PAC_SDK_DIR": "/Users/mario/SelfProject/Stellar-Enclosure/web-sdk",
+      "PAC_TOOLCHAIN_LOCK": "/tmp/stellar-unit-audit-20261026/sdk-current.lock.json",
+      "PAC_CONTRACT_ARTIFACT": "/Users/mario/SelfProject/Stellar-Enclosure/tianquan-jianshen-service/stellar-enclosure-tianquan-jianshen-contract/target/stellar-enclosure-tianquan-jianshen-contract-0.0.1.jar"
+    },
+    "frontend": "Run npm test, npm run typecheck, and npm run build in each frontend repository; the SDK npm test also builds both packages and runs the Node contract suite.",
+    "diagnosticFailureIgnore": "Some initial inventory commands used -Dmaven.test.failure.ignore=true to collect all failures. Final counts are read from XML; Components, COLA and Yuheng final regression commands do not use that option. It was not added to any project configuration."
+  },
+  "validationBoundary": [
+    "真实 PostgreSQL、Redis、Docker 和远程身份/模型服务的集成验收未执行。",
+    "按既有条件跳过的外部环境、性能预算及监听器验收保留原门禁。",
+    "未打开浏览器，未部署或发布制品；未启动供用户手工验收的应用。",
+    "本地编译和单测不代表实际部署、浏览器登录或线上数据迁移验收。"
+  ],
+  "updatedAt": "2026-10-27T08:19:47+08:00",
+  "historicalSnapshotNote": "scope、summary、repositories 等全量统计保留 2026-10-26 快照；2026-10-27 的 DTP 修复、恢复执行与局部复测结果见 deferredImplementationIssues 中的 resolution。",
+  "currentPendingImplementationIssues": 0
+}
