@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "status": "OFFLINE_VALIDATED_RUNTIME_NOT_RUN",
+  "heads": {
+    "tianquan-jianshen-service": "14fdade65cfd82068f64b1b85c6f01aa72e965c1",
+    "tianquan-shoubing-service": "bb59c718157ca15aa32e8d5877c19f2f85c357d5",
+    "tianquan-jianshen-web": "0373c365f8748d5f6e83db7030b428ccf4da5fd5",
+    "tianquan-shoubing-web": "bd0a8f4453151a96bc186d5113b855c4d23acaa9",
+    "web-sdk": "36e577a5def74761b22eedd6c8388340ec00c7a8"
+  },
+  "frontendRolePermissionPilot": {
+    "frontendPermissionLiteralOccurrences": {"before": 5, "after": 0},
+    "frontendFieldKeyLiteralOccurrences": {"before": 10, "after": 0},
+    "backendManageLiteralOccurrences": {"before": 13, "after": 1},
+    "operationDeclarationFiles": {"before": 3, "after": 1},
+    "localBuildEntrypoints": {"before": 2, "after": 2}
+  },
+  "manifestProjections": [
+    {
+      "producer": "tianquan-jianshen-java",
+      "policyDigestBeforeAndAfter": "0d59473bfc82df31968e9b94992d25111f551f8a4d60c2ccbf75dd52aa827cf4",
+      "metadataDigestBeforeAndAfter": "43e0c912c9bd161e85cda4ff828991abc40be8bb94d8e30af8295ab2ef363794"
+    },
+    {
+      "producer": "tianquan-shoubing-java",
+      "policyDigestBeforeAndAfter": "8ec4256cbf8b575795f915323f3b4ead3d18e09d1bcdfb68dcf6e9cccc548236",
+      "metadataDigestBeforeAndAfter": "b00ca1502cb165eb98cbe3aa881cb31ace69e9d1d9d428121795efe6faef7170"
+    },
+    {
+      "producer": "tianquan-jianshen-web",
+      "policyDigestBeforeAndAfter": "641be3710acf69e8aaee8c2c585724bd3dc9b0e0628f787dfededd86c33801db",
+      "metadataDigestBeforeAndAfter": "df8772b6c262ad6375fe554da940aaa2a05c84773673d309e39cf7987599c0ba"
+    },
+    {
+      "producer": "tianquan-shoubing-web",
+      "policyDigestBeforeAndAfter": "31cec0034b736cd23636c14d3c3e90bcea262c55b1148c44dd10e565218ef92e",
+      "metadataDigestBeforeAndAfter": "8d90b0232918eb479b6107f53012a489eac4ec87142a3fa3af05a67371f9b6fd"
+    }
+  ],
+  "runtimeSamples": [
+    {"scenario": "ordinary_query", "status": "NOT_RUN", "identityQueries": null, "runtimeCalls": null, "sqlCount": null, "auditDeliveryMs": null, "authorizationP95Ms": null, "authorizationP99Ms": null},
+    {"scenario": "batch_list", "status": "NOT_RUN", "identityQueries": null, "runtimeCalls": null, "sqlCount": null, "auditDeliveryMs": null, "authorizationP95Ms": null, "authorizationP99Ms": null},
+    {"scenario": "sensitive_field", "status": "NOT_RUN", "identityQueries": null, "runtimeCalls": null, "sqlCount": null, "auditDeliveryMs": null, "authorizationP95Ms": null, "authorizationP99Ms": null},
+    {"scenario": "write", "status": "NOT_RUN", "identityQueries": null, "runtimeCalls": null, "sqlCount": null, "auditDeliveryMs": null, "authorizationP95Ms": null, "authorizationP99Ms": null}
+  ],
+  "releaseScenarios": {
+    "frontendOnly": {"status": "OFFLINE_FIXTURE_ONLY", "selectedProducers": 2, "changedProducers": 1, "reusedProducers": 1},
+    "backendOnly": {"status": "OFFLINE_FIXTURE_ONLY", "selectedProducers": 2, "changedProducers": 1, "reusedProducers": 1}
+  },
+  "runtimeStarted": false,
+  "browserStarted": false,
+  "databaseMutationExecuted": false,
+  "registrationOrActivationExecuted": false
+}
